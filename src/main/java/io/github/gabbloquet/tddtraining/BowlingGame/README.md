@@ -17,6 +17,9 @@ Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour f
 
 ### Step 1 - Règles classiques
 
+Entrée : vide  
+Score attendu : 0
+
 Entrée : 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
 Score attendu : 1
 
@@ -28,9 +31,6 @@ Score attendu : 5
 
 Entrée : 1, 6, 3, 5, 1, 2, 9, 0, 3, 2, 7, 2, 5, 4, 4, 3, 6, 2, 7, 2  
 Score attendu : 74
-
-Entrée : empty  
-Score attendu : 0
 
 ### Step 2 - Le Spare
 

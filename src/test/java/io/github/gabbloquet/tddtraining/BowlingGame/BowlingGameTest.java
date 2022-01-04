@@ -28,6 +28,11 @@ public class BowlingGameTest {
   }
 
   @Test
+  void should_return_0_as_score_when_the_game_start() {
+    assertEquals(0, bowlingGame.score());
+  }
+
+  @Test
   void should_return_1_as_score_if_the_player_scores_1() {
     int userScore = 1;
 
