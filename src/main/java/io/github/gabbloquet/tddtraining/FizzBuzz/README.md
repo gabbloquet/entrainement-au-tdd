@@ -2,7 +2,11 @@
 Vous devez construire une fonction fizzBuzz qui transforme un entier en chaîne de caractères selon les règles suivantes.
 
 ## Règles
-Si le nombre est divisible par 3, on le remplace par Fizz, si le nombre est divisible par 5, on le remplace par Buzz, si le nombre est divisible par 3 et 5, alors on le remplace par FizzBuzz. Dans tous les autres cas, on retourne le nombre sous forme de chaîne de caractères.
+ - Si le nombre est divisible par 3, on le remplace par Fizz
+ - si le nombre est divisible par 5, on le remplace par Buzz
+ - si le nombre est divisible par 3 et 5, alors on le remplace par FizzBuzz. 
+ 
+> Dans tous les autres cas, on retourne le nombre sous forme de chaîne de caractères.
 
 ## Examples
 ```
