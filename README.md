@@ -1,6 +1,6 @@
 # Entrainement au Test Driven Development
 
-Oui c'est en Français ! (Et c'est voulu :D)
+Oui c'est en Français ! (Et c'est voulu :D)  
 Ce repository a pour but de s'exercer au test driven development à travers des exemples, qui, je l'espère seront de plus en plus nombreux.   
 
 ## Comment ?
