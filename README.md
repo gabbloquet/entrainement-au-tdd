@@ -14,7 +14,7 @@ Pour vous entrainer, rien de plus simple !
 ## Exercices proposés
 
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
-2. 
+2. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
 
 ## Qu'est ce que le Test driven Development ?
 
