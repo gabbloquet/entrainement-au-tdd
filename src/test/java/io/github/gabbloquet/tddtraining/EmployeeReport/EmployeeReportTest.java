@@ -12,12 +12,21 @@ public class EmployeeReportTest {
 
   @Test
   void should_return_all_employees() {
-    List<Employee> employees = List.of(
-      new Employee("Max", 17),
-      new Employee("Sepp", 18),
-      new Employee("Nina", 15),
-      new Employee("Mike", 51)
+    List<String> employees = List.of(
+      "Max",
+      "Sepp",
+      "Nina",
+      "Mike"
     );
     assertEquals(employees, employeeReport.getEmployees());
+  }
+
+  @Test
+  void should_return_adults_sorted_by_name_descending_in_uppercase() {
+    List<String> employees = List.of(
+      "SEPP",
+      "MIKE"
+    );
+    assertEquals(employees, employeeReport.getList());
   }
 }
