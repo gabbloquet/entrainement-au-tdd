@@ -30,7 +30,7 @@ Permettre à la méthode d'ajout de gérer les nouvelles lignes comme séparateu
 
 Ne pas permettre à l'entrée de se terminer par un séparateur.
 
-"1,3," n'est pas valide et devrait renvoyer le message Nombre attendu mais `\n` trouvé.
+"1,3," n'est pas valide et devrait renvoyer le message `Nombre attendu mais \n ou , trouvé.`
 
 ## Séparateurs maison
 
