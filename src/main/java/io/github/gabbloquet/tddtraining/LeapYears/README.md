@@ -19,4 +19,4 @@ Ce sont les règles qui participent au calendrier dit grégorien, en vigueur act
 
 En appliquant les trois règles des années bissextiles, on voit donc que 2008 est divisible par 4 mais pas par 100. Donc est bissextile.  
 Ensuite, les divisibles par 4 et par 100, elles ne le sont pas par 400. Dans le futur, l'année 2100 par exemple, divisible par 4 et par 100, mais pas par 400, ne sera pas bissextile.   
-2009, d'entrée, n'est pas divisible par 4, donc est «commune». Un petit truc est encore valable pour l'instant ; les années bissextiles sont des années de JO d'été.
+2009, d'entrée, n'est pas divisible par 4, donc est « commune ». Un petit truc est encore valable pour l'instant ; les années bissextiles sont des années de JO d'été.
