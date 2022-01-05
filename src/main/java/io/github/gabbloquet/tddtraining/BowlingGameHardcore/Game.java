@@ -1,11 +1,11 @@
-package io.github.gabbloquet.tddtraining.BowlingGame;
+package io.github.gabbloquet.tddtraining.BowlingGameHardcore;
 
 import java.util.*;
 
-public class BowlingGame {
+public class Game {
   private final List<Integer> strikes;
 
-  public BowlingGame() {
+  public Game() {
     this.strikes = new LinkedList<>();
   }
 

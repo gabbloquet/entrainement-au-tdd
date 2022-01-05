@@ -7,6 +7,9 @@ Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour f
 
 [Plus de détails ici](https://www.lelooping.com/montivilliers/les-regles-du-bowling/).
 
+Attention, pour ce kata, on ne s'intéresse qu'aux parties terminées et correctes.  
+La version plus difficile est [ici](../BowlingGameHardcore/README.md)
+
 ## Exigences
 
 Écrivez une classe Game qui possède deux méthodes :
@@ -20,56 +23,23 @@ Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour f
 Entrée : vide  
 Score attendu : 0
 
-Entrée : 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 1
+Entrée : On roll 20 fois 0   
+Score attendu : 0
 
-Entrée : 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 2
-
-Entrée : 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 5
-
-Entrée : 1, 6, 3, 5, 1, 2, 9, 0, 3, 2, 7, 2, 5, 4, 4, 3, 6, 2, 7, 2  
-Score attendu : 74
+Entrée : On roll 20 fois 1  
+Score attendu : 20
 
 ### Step 2 - Le Spare
 
-Entrée : 1, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 10
-
-Entrée : 1, 9, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 18
-
-Entrée : 1, 9, 7, 3, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 43
+Entrée : On roll 7, 3 puis 4 & 17 fois 0  
+Score attendu : 17
 
 ### Step 3 - Le Strike
 
-Entrée : 10, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 11
+Entrée : On roll 10, 3 puis 4 & 16 fois 0  
+Score attendu : 24
 
-Entrée : 10, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 19
+### Step 4 - Le cas du génie
 
-Entrée : 10, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 20
-
-Entrée : 10, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 42
-
-Entrée : 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  
-Score attendu : 60
-
-### Step 4 - La fin de partie
-
-Entrée : 10, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0  
-Score attendu : 52
-
-Entrée : 10, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5  
-Score attendu : 57
-
-Entrée : 10, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 2  
-Score attendu : 61
-
-Entrée : 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10  
+Entrée : On roll 12 fois 10  
 Score attendu : 300
