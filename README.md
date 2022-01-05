@@ -16,6 +16,7 @@ Pour vous entrainer, rien de plus simple !
 **Facile**
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
 2. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
+3. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
 
 **Moyen**
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
