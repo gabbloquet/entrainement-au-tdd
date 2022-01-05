@@ -15,16 +15,16 @@ Créez une méthode qui :
 
 ## Les 3 tests :
 
-**Entrée :** “”
-**Dictionnaire :** empty
+**Entrée :** “”  
+**Dictionnaire :** empty  
 **Sortie :** “”
 
-**Entrée :** “$temp$” 
-**Dictionnaire :** [“temp”, “temporary”]
-**Sortie :** “temporary”
+**Entrée :** “$temp$”  
+**Dictionnaire :** `[“temp”, “temporary”]`  
+**Sortie :** “temporary”  
 
-**Entrée :** “$temp$ here comes the name $name$”
-**Dictionnaire :** [“temp”, “temporary”] [“name”, “John Doe”]
+**Entrée :** “$temp$ here comes the name $name$”  
+**Dictionnaire :** `[“temp”, “temporary”] [“name”, “John Doe”]`  
 **Sortie :** “temporary here comes the name John Doe”
 
 Amusez vous bien :D
