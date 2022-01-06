@@ -47,4 +47,14 @@ La grille d'éclairage que vous avez achetée possède en fait des commandes de 
  - allumer 0,0 à 0,0 augmenterait la luminosité totale de 1.
  - basculer de 0,0 à 999,999 augmenterait la luminosité totale de 2000000.
 
+## Aide
+
+Ne vous focalisez pas sur les instructions, mais plutôt sur les règles.  
+Lorsque j'allume le rendu est celui-ci, lorsque j'éteins celui-là...
+
+### Solution
+
+Si vous souhaitez voir mes résultats, il vous suffit d'executer [la classe Solution](./Solution.java).
+
+
 Have fun :D 
