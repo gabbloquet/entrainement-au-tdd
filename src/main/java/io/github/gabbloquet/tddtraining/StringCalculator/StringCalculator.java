@@ -1,8 +1,11 @@
 package io.github.gabbloquet.tddtraining.StringCalculator;
 
+import org.springframework.expression.Operation;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
@@ -12,6 +15,35 @@ public abstract class StringCalculator {
   private static final String DEFAULT_DELIMITER = ",";
 
   public abstract String calculate(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException, NotCompliantOperationException;
+
+  String calculateWith(Operation operationType, String operation) throws NegativeNotAllowedException, NotANumberException, NotCompliantOperationException, UnexpectedNewlineException, UnexpectedCommaException {
+    if(operation.isEmpty())
+      return "0";
+
+    checkOperationCompliance(operation);
+    String delimiter = getDelimiter(operation);
+    operation = cleanOperation(operation, delimiter);
+
+    List<String> terms = getTerms(operation, delimiter);
+    if(terms.size() == 1)
+      return operation;
+
+    float result = terms.stream()
+      .map(Float::parseFloat)
+      .reduce((float) getStarterToReduce(operationType), getFunctionToReduce(operationType));
+
+    return toString(result);
+  }
+
+  private int getStarterToReduce(Operation operationType) {
+    return operationType == Operation.ADD ? 0 : 1;
+  }
+
+  private BinaryOperator<Float> getFunctionToReduce(Operation operationType) {
+    return operationType == Operation.ADD
+      ? Float::sum
+      : (subMultiplication, term) -> subMultiplication * term;
+  }
 
   String cleanOperation(String operation, String delimiter) {
     if(delimiter != null)
