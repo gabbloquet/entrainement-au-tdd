@@ -7,36 +7,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-public class StringCalculator {
+public abstract class StringCalculator {
 
   private static final String DEFAULT_DELIMITER = ",";
 
-  public String add(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException, NotCompliantOperationException {
-    if(operation.isEmpty())
-      return "0";
+  public abstract String calculate(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException, NotCompliantOperationException;
 
-    checkOperationCompliance(operation);
-    String delimiter = getDelimiter(operation);
-    operation = cleanOperation(operation, delimiter);
-
-    List<String> terms = getTerms(operation, delimiter);
-    if(terms.size() == 1)
-      return operation;
-
-    float result = terms.stream()
-      .map(Float::parseFloat)
-      .reduce((float) 0, Float::sum);
-
-    return toString(result);
-  }
-
-  private String cleanOperation(String operation, String delimiter) {
+  String cleanOperation(String operation, String delimiter) {
     if(delimiter != null)
       return operation.substring(3 + delimiter.length());
     return operation;
   }
 
-  private String getDelimiter(String operation) {
+  String getDelimiter(String operation) {
     Pattern pattern = Pattern.compile("//(.*)\\n");
     Matcher matcher = pattern.matcher(operation);
 
@@ -45,7 +28,7 @@ public class StringCalculator {
     return null;
   }
 
-  private List<String> getTerms(String operation, String delimiter) throws UnexpectedCommaException {
+  List<String> getTerms(String operation, String delimiter) throws UnexpectedCommaException {
     if(delimiter != null) {
       checkDoubleDelimiter(operation, delimiter);
     } else {
@@ -68,7 +51,7 @@ public class StringCalculator {
     return delimiter;
   }
 
-  private void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException, NegativeNotAllowedException, NotCompliantOperationException {
+  void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException, NegativeNotAllowedException, NotCompliantOperationException {
     if(operation.endsWith(",") || operation.endsWith("\n"))
       throw new NotANumberException();
 
@@ -112,7 +95,7 @@ public class StringCalculator {
     return negatives.toString();
   }
 
-  private String toString(float result) {
+  String toString(float result) {
     DecimalFormat deciFormat = new DecimalFormat();
     deciFormat.setRoundingMode(RoundingMode.HALF_EVEN);
     return deciFormat.format(result);
