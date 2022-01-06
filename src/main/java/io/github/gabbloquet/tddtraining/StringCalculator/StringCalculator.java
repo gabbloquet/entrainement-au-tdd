@@ -10,7 +10,7 @@ public class StringCalculator {
 
   private static final String DEFAULT_DELIMITER = ",";
 
-  public String add(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException {
+  public String add(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     if(operation.isEmpty())
       return "0";
 
@@ -67,13 +67,34 @@ public class StringCalculator {
     return delimiter;
   }
 
-  private void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException {
+  private void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException, NegativeNotAllowedException {
     if(operation.endsWith(",") || operation.endsWith("\n"))
       throw new NotANumberException();
+
+    String unexpectedNegatives = getNegatives(operation);
+    if(!unexpectedNegatives.isEmpty())
+      throw new NegativeNotAllowedException(unexpectedNegatives);
 
     int indexOfError = operation.indexOf(",\n");
     if(indexOfError != -1)
       throw new UnexpectedNewlineException(indexOfError + 1);
+  }
+
+  private String getNegatives(String operation) {
+    StringBuilder negatives = new StringBuilder();
+
+    Pattern pattern = Pattern.compile("-(\\d*)");
+    Matcher matcher = pattern.matcher(operation);
+
+    while (matcher.find()) {
+      if(negatives.length() == 0){
+        negatives.append("-").append(matcher.group(1));
+      } else {
+        negatives.append(", -").append(matcher.group(1));
+      }
+    }
+
+    return negatives.toString();
   }
 
   private String toString(float result) {

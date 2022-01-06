@@ -9,37 +9,37 @@ public class StringCalculatorTest {
   private final StringCalculator stringCalculator = new StringCalculator();
 
   @Test
-  void should_return_0_by_default() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_0_by_default() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("0", stringCalculator.add(""));
   }
 
   @Test
-  void should_return_1_if_operation_is_1() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_1_if_operation_is_1() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("1", stringCalculator.add("1"));
   }
 
   @Test
-  void should_return_2_if_operation_is_1_comma_1() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_2_if_operation_is_1_comma_1() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("2", stringCalculator.add("1,1"));
   }
 
   @Test
-  void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("3,3", stringCalculator.add("1.1,2.2"));
   }
 
   @Test
-  void should_return_6_if_operation_is_1_comma_2_comma_3() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_6_if_operation_is_1_comma_2_comma_3() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("6", stringCalculator.add("1,2,3"));
   }
 
   @Test
-  void should_return_16_if_operation_is_1_comma_2_comma_3_comma_10() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_16_if_operation_is_1_comma_2_comma_3_comma_10() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("16", stringCalculator.add("1,2,3,10"));
   }
 
   @Test
-  void should_return_6_if_operation_is_1_newline_2_comma_3() throws UnexpectedNewlineException, NotANumberException , UnexpectedCommaException {
+  void should_return_6_if_operation_is_1_newline_2_comma_3() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("6", stringCalculator.add("1\n2,3"));
   }
 
@@ -104,17 +104,17 @@ public class StringCalculatorTest {
   }
 
   @Test
-  void should_return_3_with_semicolon_as_delimiter() throws NotANumberException, UnexpectedNewlineException , UnexpectedCommaException {
+  void should_return_3_with_semicolon_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("3", stringCalculator.add("//;\n1;2"));
   }
 
   @Test
-  void should_return_6_with_pipe_as_delimiter() throws NotANumberException, UnexpectedNewlineException , UnexpectedCommaException {
+  void should_return_6_with_pipe_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("6", stringCalculator.add("//|\n1|2|3"));
   }
 
   @Test
-  void should_return_5_with_text_as_delimiter() throws NotANumberException, UnexpectedNewlineException , UnexpectedCommaException {
+  void should_return_5_with_text_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException {
     assertEquals("5", stringCalculator.add("//sep\n2sep3"));
   }
 
@@ -149,6 +149,18 @@ public class StringCalculatorTest {
     });
 
     String expectedMessage = "Negative not allowed : -1";
+    String actualMessage = exception.getMessage();
+
+    assertTrue(actualMessage.contains(expectedMessage));
+  }
+
+  @Test
+  void should_throw_negative_not_allowed_exception_if_operation_contains_minus_four_minus_five(){
+    Exception exception = assertThrows(NegativeNotAllowedException.class, () -> {
+      stringCalculator.add("2,-4,-5");
+    });
+
+    String expectedMessage = "Negative not allowed : -4, -5";
     String actualMessage = exception.getMessage();
 
     assertTrue(actualMessage.contains(expectedMessage));
