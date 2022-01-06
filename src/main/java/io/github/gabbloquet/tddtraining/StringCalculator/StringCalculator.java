@@ -5,12 +5,13 @@ import java.text.DecimalFormat;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class StringCalculator {
 
   private static final String DEFAULT_DELIMITER = ",";
 
-  public String add(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException {
+  public String add(String operation) throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException, NotCompliantOperationException {
     if(operation.isEmpty())
       return "0";
 
@@ -67,17 +68,31 @@ public class StringCalculator {
     return delimiter;
   }
 
-  private void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException, NegativeNotAllowedException {
+  private void checkOperationCompliance(String operation) throws UnexpectedNewlineException, NotANumberException, NegativeNotAllowedException, NotCompliantOperationException {
     if(operation.endsWith(",") || operation.endsWith("\n"))
       throw new NotANumberException();
 
+    int indexOfUnexpectedNewline = operation.indexOf(",\n");
+    int indexOfUnexpectedComma = operation.indexOf(",,");
     String unexpectedNegatives = getNegatives(operation);
+
+    if(areAtLeastTwoErrors(indexOfUnexpectedNewline, indexOfUnexpectedComma, unexpectedNegatives))
+      throw new NotCompliantOperationException(indexOfUnexpectedNewline, indexOfUnexpectedComma, unexpectedNegatives);
+
     if(!unexpectedNegatives.isEmpty())
       throw new NegativeNotAllowedException(unexpectedNegatives);
 
-    int indexOfError = operation.indexOf(",\n");
-    if(indexOfError != -1)
-      throw new UnexpectedNewlineException(indexOfError + 1);
+    if(indexOfUnexpectedNewline != -1)
+      throw new UnexpectedNewlineException(indexOfUnexpectedNewline + 1);
+  }
+
+  private boolean areAtLeastTwoErrors(int indexOfUnexpectedNewline, int indexOfUnexpectedComma, String unexpectedNegatives) {
+    boolean isNewlineError = indexOfUnexpectedNewline != -1;
+    boolean isCommaError = indexOfUnexpectedComma != -1;
+    boolean areNegativesError = !unexpectedNegatives.isEmpty();
+    return Stream.of(isNewlineError, isCommaError, areNegativesError)
+      .filter(bool -> bool)
+      .count() > 1;
   }
 
   private String getNegatives(String operation) {

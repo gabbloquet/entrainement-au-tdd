@@ -24,13 +24,14 @@ Faite en sorte que la fonction `add` puisse prendre plusieurs arguments.
 Permettre à la méthode d'ajout de gérer les nouvelles lignes comme séparateurs :
 
  - "1\n2,3" devrait renvoyer "6".
- - "175.2,\n35" n'est pas valide et doit renvoyer le message `Nombre attendu mais '\n' trouvé en position 6.`
+ - "175.2,\n35" n'est pas valide et doit renvoyer le message `"Number expected but '\n' found at position 6."`
 
 ## Nombre manquant à la dernière position
 
 Ne pas permettre à l'entrée de se terminer par un séparateur.
 
-"1,3," n'est pas valide et devrait renvoyer le message `Nombre attendu mais \n ou , trouvé.`
+ - "1,3," n'est pas valide et devrait renvoyer le message `"Number expected but \n or , found."`
+ - "2,12\n" n'est pas valide et devrait renvoyer le message `"Number expected but \n or , found."`
 
 ## Séparateurs maison
 
@@ -56,7 +57,12 @@ L'appel de `add` avec des nombres négatifs renverra le message `Negative not al
 
 L'appel d'`add` avec plusieurs erreurs renverra tous les messages d'erreur séparés par des nouvelles lignes.
 
- - "-1,,2" n'est pas valide et renvoie le message `"Négatif non autorisé : -1\nNombre attendu mais ',' trouvé en position 3."`
+ - "-1,,2" n'est pas valide et renvoie le message `"Negative not allowed : -1\nNumber expected but ',' found at position 3."`
+ - "1,-2,-3,,4" n'est pas valide et renvoie le message `"Negative not allowed : -2, -3\nNumber expected but ',' found at position 8."`
+ - "1,-2,-3,\n4" n'est pas valide et renvoie le message `"Negative not allowed : -2, -3\nNumber expected but '\n' found at position 8."`
+ - "1,-2,-3,\n4,,5" n'est pas valide et renvoie le message `"Negative not allowed : -2, -3\nNumber expected but '\n' found at position 8.\nNumber expected but ',' found at position 11."`
+
+# BONUS
 
 ## Gestion des erreurs
 
@@ -68,6 +74,6 @@ Introduisez une fonction d'addition interne qui renvoie un nombre au lieu d'une 
  - tuple avec structure d'erreur comme dans Go
  - etc.
 
-## Bonus
+## Multiply
 
 Implémentez une fonction `multiply` pour la multiplication suivant ces règles.
