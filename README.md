@@ -1,7 +1,7 @@
 # Entrainement au Test Driven Development
 
 Oui c'est en Français ! (Et c'est voulu :D)  
-Ce repository a pour but de s'exercer au test driven development à travers des exemples, qui, je l'espère seront de plus en plus nombreux.   
+Ce repository a pour but de s'exercer au test driven development à travers des exemples (katas), qui, je l'espère, sauront vous divertir.   
 
 ## Comment ?
 
@@ -18,15 +18,17 @@ Pour vous entrainer, rien de plus simple !
 2. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
 3. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
 4. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
-5. 
+5. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
+6. 🚧 
 
 **Moyen**
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
 2. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
+3. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
-2. 
+2. 🚧 
 
 ## Qu'est ce que le Test driven Development ?
 
