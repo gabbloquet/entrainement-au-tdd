@@ -1,6 +1,6 @@
 # Dictionary Replacer
 
-**Niveau** : Facile 
+**Niveau :** Facile 
 
 ## Introduction
 

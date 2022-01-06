@@ -1,6 +1,6 @@
 # Employee Report
 
-**Niveau** : Facile 
+**Niveau :** Facile 
 
 Ce Kata a été développé pour montrer comment la surspécification des assertions nuit à la maintenabilité des tests.   
 Un article de blog avec une solution possible => [ici](https://dev.to/webpapaya/writing-better-test-assertions-lml).

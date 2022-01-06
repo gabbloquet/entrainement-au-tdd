@@ -1,6 +1,6 @@
 # FizzBuzz
 
-**Niveau** : Facile
+**Niveau :** Facile
 
 Vous devez construire une fonction fizzBuzz qui transforme un entier en chaîne de caractères selon les règles suivantes.
 

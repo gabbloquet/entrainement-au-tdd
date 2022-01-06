@@ -1,6 +1,6 @@
 # LeapYears / Années bissextiles
 
-**Niveau** : Facile 
+**Niveau :** Facile 
 
 ## Un peu d'histoire
 

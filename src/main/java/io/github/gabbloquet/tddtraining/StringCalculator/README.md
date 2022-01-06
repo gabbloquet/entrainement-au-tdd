@@ -1,6 +1,6 @@
 # String Calculator
 
-**Niveau** : Moyen 
+**Niveau :** Moyen 
 
 Ce kata classique vous guide pas à pas dans l'implémentation d'une calculatrice qui reçoit un String en entrée.  
 C'est un bon exercice de refactoring et d'implémentation incrémentale.

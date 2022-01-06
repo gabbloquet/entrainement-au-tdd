@@ -1,6 +1,6 @@
 # ChristmasLight
 
-**Niveau** : Facile
+**Niveau :** Facile
 
 ## Probablement un risque d'incendie
 
