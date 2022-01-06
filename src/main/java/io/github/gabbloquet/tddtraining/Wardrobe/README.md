@@ -23,9 +23,9 @@ _Avec quelles combinaisons d'éléments d'armoire pouvez-vous tirer le meilleur 
 
 Voici la liste des prix des éléments d'armoire disponibles :
 
-50cm => 59 EUR
-75cm => 62 EUR
-100cm => 90 EUR
-120cm => 111 EUR
+ - 50cm => 59 EUR
+ - 75cm => 62 EUR
+ - 100cm => 90 EUR
+ - 120cm => 111 EUR
 
 > Écrivez une deuxième fonction qui vérifie laquelle des combinaisons résultantes est la moins chère.
