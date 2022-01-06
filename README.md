@@ -82,6 +82,11 @@ Ensuite, nous pouvons refactor.
 Après avoir implémenté une règle métier / un test (avec Red-Green-Refactor), assurez-vous de trouver toutes les "bizarreries" ou non-généralités dans le code de production et éliminez-les une par une en écrivant un test qui prouve cette non-généralité.
 Assurez-vous de tester les cas à la marge !
 
+#### Pause ? Laisser un test qui ne passe pas
+
+Si vous souhaitez faire une pause, reprendre le kata plus tard, je vous conseille de laisser un test qui ne passe pas.  
+Celui-ci vous permettra de retrouver facilement où vous en étiez.
+
 ### Quelques ressources
 
  - [Wikipedia](https://fr.wikipedia.org/wiki/Test_driven_development)
