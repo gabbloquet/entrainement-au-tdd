@@ -97,3 +97,9 @@ Celui-ci vous permettra de retrouver facilement où vous en étiez.
  - [Apprendre le TDD par IPPON](https://blog.ippon.fr/2020/02/12/apprendre-le-tdd/)
  - [Vidéo : Comment faire du TDD](https://www.youtube.com/watch?v=wbZ6jWmRY14)
  - [Video : TDD par l'exemple](https://www.youtube.com/watch?v=nbSaq_ykOl4)
+
+### Note
+
+De plus, le TDD permet de ne pas se retrouver dans cette situation :
+
+![doc-bugs-apres-le-developpement](https://media-exp1.licdn.com/dms/image/C4E22AQHenATWnzpdyA/feedshare-shrink_1280/0/1641973776197?e=1645056000&v=beta&t=ITrF_7pXtUINc-5rRIrBLfC7aQ0l2LBCo5kFICmNtbI)
