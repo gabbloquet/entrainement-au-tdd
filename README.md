@@ -90,6 +90,10 @@ Assurez-vous de tester les cas à la marge !
 Si vous souhaitez faire une pause, reprendre le kata plus tard, je vous conseille de laisser un test qui ne passe pas.  
 Celui-ci vous permettra de retrouver facilement où vous en étiez.
 
+#### Le papier
+
+Personnellement j'aime le support papier et m'en sers quotidiennement. Pour ce qui est de la réalisation des katas je ne peux que conseiller de s'en servir. Cela peut parfois s'avérer très utile pour garder en tête les règles clés, dessiner des choses (Cf. Kata Christmas Light), noter pour se souvenir / ne pas oublier...
+
 ### Quelques ressources
 
  - [Wikipedia](https://fr.wikipedia.org/wiki/Test_driven_development)
