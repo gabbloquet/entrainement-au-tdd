@@ -4,10 +4,10 @@
 
 ## Configuez votre garde-robe
 
-Imaginez que vous venez d'emménager dans votre nouvel appartement, et que vous vous rendez compte que vous avez encore besoin d'une nouvelle armoire pour votre dressing.  
-Malheureusement, vous ne trouverez pas d'armoire qui s'adapte exactement à la taille de votre mur. Mais heureusement, le vendeur de meubles fabriqués en France de votre choix vous offre la possibilité de construire votre propre armoire personnalisée en combinant des éléments d'armoire individuels.
+Imaginez que vous venez emménager dans votre nouvel appartement, et que vous vous rendez compte que vous avez encore besoin d'une nouvelle armoire pour votre dressing.  
+Malheureusement, vous ne trouverez pas d'armoire qui s'adapte exactement à la taille de votre mur. Mais votre vendeur de meubles fabriqués en France préféré vous offre la possibilité de construire votre propre armoire personnalisée en combinant des éléments d'armoire individuels.
 
-Les éléments de l'armoire sont disponibles dans les tailles suivantes : 
+Il propose les éléments d'armoire individuels suivants :  
  - 50 cm
  - 75 cm
  - 100 cm
@@ -21,7 +21,7 @@ _Avec quelles combinaisons d'éléments d'armoire pouvez-vous tirer le meilleur 
 
 ## Tâche supplémentaire
 
-Voici la liste des prix des éléments d'armoire disponibles :
+Voici la liste des prix associés aux éléments d'armoire disponibles :
 
  - 50cm => 59 EUR
  - 75cm => 62 EUR
