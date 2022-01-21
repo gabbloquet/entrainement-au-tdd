@@ -70,15 +70,27 @@ Il peut être décrit succinctement par l'ensemble des règles suivantes :
 
 ### Tips
 
-#### Se focaliser sur les cas simples
+#### Se focaliser d'abord sur les cas simples
 
 D'abord se focaliser sur les cas simples.
 Par exemple dans le cas de [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md), nous commençons par les chiffres non compris dans les règles à implémenter => 1 & 2.
+
+#### Comportement / Behavior
+
+Un test doit décrire un comportement. L'objectif de la suite de tests est de mettre en avant tout ce qui défini ce que l'on veut développer.  
+Ces tests prouvent que le code écrit fonctionne.
 
 #### Ecrire le code MINIMAL
 
 On ne fait pas ce que les tests ne nous ont pas demandé de faire ! L'objectif est de faire passer le test au plus vite, on va droit au but pour faire passer le test que nous venons d'écrire.
 Ensuite, nous pouvons refactor.
+
+#### Isolation
+
+Un test doit être unitaire, ne pas être connecté de manière quelconque à un autre test.   
+Exemple : Si on écrit quelque chose en base de données, il ne faut pas qu'un autre test fail du fait qu'un élément a été ajouté auparavant.
+
+Attention cela ne signifie pas que l'on ne test qu'une seule fonction avec un test, on test bien un comportement !
 
 #### La triangulation
 
