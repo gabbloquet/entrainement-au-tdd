@@ -29,3 +29,14 @@ Voici la liste des prix associés aux éléments d'armoire disponibles :
  - 120cm => 111 EUR
 
 > Écrivez une deuxième fonction qui vérifie laquelle des combinaisons résultantes est la moins chère.
+
+## Aide
+
+Exemple de combinaisons : 
+
+50, 50, 50, 50, 50
+50, 50, 75, 75,
+75, 75, 100
+....
+
+(Pour ma part, j'ai trouvé 12 combinaisons)
