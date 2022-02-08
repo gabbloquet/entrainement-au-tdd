@@ -19,3 +19,12 @@ Bien entendu, nous pouvons y ajouter d'autres méthodes pour, par exemple, contr
 ## Notes
 
 Il n'est pas possible de retirer (pop) un élément à une pile vide.
+
+## Demonstration
+
+Voici la démonstration de ce que j'avançais dans l'introduction : 
+
+https://github.com/gabbloquet/entrainement-au-tdd/commit/296ccb470c9f2aace3a7a90d0091fa2a9c849d54
+
+Après avoir écrit 7 tests, je n'avais toujours pas créer de liste car les tests ne me l'avaient pas encore suggéré.  
+_Ne pas écrire plus de code que ce que les tests vous ont suggéré d'écrire._
