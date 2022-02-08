@@ -33,10 +33,11 @@ Pour vous entrainer, rien de plus simple !
 
 ## Qu'est ce que le Test driven Development ?
 
-Les artisans développeurs (software crafters, cf. Software Craftsmanship) recommandent vivement la pratique du TDD (Test Driven Development).
+Le test driven development est l'une des pratiques mise en avant par la méthode agile **Extreme programming**.
+Elle est vivement recommandée par les artisans développeurs (software crafters, cf. Software Craftsmanship).
 
 Elle est certainement la méthode de design de code la plus efficace connue actuellement !  
-Cependant, malgré son incroyable efficience, elle est souvent très mal comprise.
+Cependant, malgré son incroyable efficience, elle est souvent mal comprise.
 
 ![Red green refactor](https://www.thinktocode.com/wp-content/uploads/2018/02/red-green-refactor.png)
 
