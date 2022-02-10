@@ -30,7 +30,7 @@ public class PrimeFactorsTest {
   }
 
   @Test
-  void should_return_3_and_X_if_X_is_disible_by_3() {
+  void should_return_3_and_X_if_X_is_divisible_by_3() {
     assertEquals(List.of(3, 3), factorsOf(9));
     assertEquals(List.of(3, 5), factorsOf(15));
   }
