@@ -18,12 +18,13 @@ Pour vous entrainer, rien de plus simple !
 
 **Facile**
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
-2. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
-3. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
-4. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
-5. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
-6. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
-7. 🚧 
+2. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
+3. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
+4. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
+5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
+6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
+7. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
+8. 🚧 
 
 **Moyen**
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
