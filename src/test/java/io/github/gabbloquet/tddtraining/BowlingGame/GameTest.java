@@ -1,58 +1,63 @@
 package io.github.gabbloquet.tddtraining.BowlingGame;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 public class GameTest {
-  private final Game game = new Game();
+  private Game game;
 
-  @Test
-  void shouldScoreGutterGame() {
-    rolls(20, 0);
+  @BeforeEach
+  void setUp() {
+    game = new Game();
+  }
 
-    assertThat(game.score()).isEqualTo(0);
+  private void rollMany(int times, int score) {
+    for(int i = 0; i < times; i++)
+      game.roll(score);
   }
 
   @Test
-  void shouldScoreGameOfOnes() {
-    rolls(20, 1);
-
-    assertThat(game.score()).isEqualTo(20);
+  void should_return_0_for_a_gutter_game() {
+    rollMany(20, 0);
+    Assertions.assertEquals(0, game.score());
   }
 
   @Test
-  void shouldScoreSpare() {
+  void should_return_20_for_all_ones() {
+    rollMany(20, 1);
+    Assertions.assertEquals(20, game.score());
+  }
+
+  @Test
+  void should_add_next_frame_score_when_spare() {
+    rollSpare();
+    game.roll(4);
+    rollMany(17, 0);
+    Assertions.assertEquals(18, game.score());
+  }
+
+  private void rollSpare() {
     game.roll(7);
     game.roll(3);
-    game.roll(4);
-
-    rolls(17, 0);
-
-    assertThat(game.score()).isEqualTo((7 + 3) + 4 + 4);
   }
 
   @Test
-  void shouldScoreStrike() {
-    game.roll(10);
+  void should_add_2_next_frame_score_when_strike() {
+    rollStrike();
+    game.roll(2);
     game.roll(3);
-    game.roll(4);
-    rolls(16, 0);
+    rollMany(16, 0);
+    Assertions.assertEquals(20, game.score());
+  }
 
-    assertThat(game.score()).isEqualTo(10 + (3 + 4) + (3 + 4));
+  private void rollStrike() {
+    game.roll(10);
   }
 
   @Test
-  void shouldScorePerfectGame() {
-    rolls(12, 10);
-
-    assertThat(game.score()).isEqualTo(300);
+  void roll_a_perfect_game() {
+    rollMany(12, 10);
+    Assertions.assertEquals(300, game.score());
   }
-
-  private void rolls(int rolls, int pinsDown) {
-    for (int roll = 0; roll < rolls; roll++) {
-      game.roll(pinsDown);
-    }
-  }
-
 }

@@ -34,7 +34,7 @@ Score attendu : 20
 ### Step 2 - Le Spare
 
 Entrée : On roll 7, 3 puis 4 & 17 fois 0  
-Score attendu : 17
+Score attendu : 18
 
 ### Step 3 - Le Strike
 
