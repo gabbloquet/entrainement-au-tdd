@@ -13,10 +13,27 @@ Vous essayez de casser les lignes aux limites des mots.
 
 Comme dans un traitement de texte, vous coupez la ligne en remplaçant le dernier espace d'une ligne par une nouvelle ligne.
 
+## Règles
+ - Faites tenir autant de mots que possible sur une seule ligne.
+ - Essayez toujours de rompre sur les espaces.
+ - Si un mot est plus long qu'une ligne, séparez-le en l'ajoutant autant que possible à la ligne précédente, puis séparez-le à nouveau s'il ne tient toujours pas sur la ligne actuelle, etc.
+ - Les lignes ne doivent pas contenir d'espaces en tête ou en queue de ligne.
+
 ## Exemple
 
-Voici un exemple | 8 => Voici un\nexemple
-Voici un second exemple | 5 => Voici\nun\nsecond\nexemple 
+```
+ ("test", 7)            -> "test"
+ ("hello world", 7)     -> "hello\\world"
+ ("a lot of words for a single line", 10) -> "a lot of\\words for\\a single\\line"
+
+ ("this is a test", 4)  -> "this\\is a\\test"
+ ("a longword", 6)      -> "a long\\word"
+ ("areallylongword", 6) -> "areall\\ylongw\\ord"
+ 
+ ("greedy whenthewordistoolong", 6) -> "greedy\\whenth\\ewordi\\stoolo\\ng"
+ ("greedy whenthewordistoolong", 7) -> "greedy\\whenthe\\wordist\\oolong"   (=> no trailing space)
+```
+ 
 
 ## Notes 
 
