@@ -24,19 +24,20 @@ Pour vous entrainer, rien de plus simple !
 5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
 6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
 7. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
-8. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
-9. 🚧 
+8. 🚧 
 
 **Moyen**
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
 2. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
-3. 🚧 
+3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
+3. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
+4. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
 2. 🚧 
 
-## Qu'est ce que le Test driven Development ?
+## Qu'est-ce que le Test driven Development ?
 
 Le test driven development est l'une des pratiques mise en avant par la méthode agile **Extreme programming**.
 Elle est vivement recommandée par les artisans développeurs (software crafters, cf. Software Craftsmanship).
@@ -86,7 +87,7 @@ Par exemple dans le cas de [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtr
 Un test doit décrire un comportement. L'objectif de la suite de tests est de mettre en avant tout ce qui défini ce que l'on veut développer.  
 Ces tests prouvent que le code écrit fonctionne.
 
-#### Ecrire le code MINIMAL
+#### Écrire le code MINIMAL
 
 On ne fait pas ce que les tests ne nous ont pas demandé de faire ! L'objectif est de faire passer le test au plus vite, on va droit au but pour faire passer le test que nous venons d'écrire.
 Ensuite, nous pouvons refactor.

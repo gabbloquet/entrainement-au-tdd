@@ -1,6 +1,6 @@
 # WordWrap
 
-**Niveau :** Facile
+**Niveau :** Moyen
 
 ## Description
 
