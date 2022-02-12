@@ -12,13 +12,20 @@ Les Romains écrivaient les nombres à l'aide des lettres : I, V, X, L, C, D, M.
 
 Le Kata dit que vous devez écrire une fonction pour convertir des nombres normaux en chiffres romains : 
 
-Par exemple : 
+**Par exemple :** 
 
-     1 --> I
-     10 --> X
-     7 --> VII
+```
+ 1 --> I
+ 7 --> VII
+ 10 --> X
+ 49 -> XLIX
+ 847 -> DCCCXLVII
+ 1053 -> MLIII
+ 1776 -> MDCCLXXVI
+ 2018 -> MMXVIII
+```
 
-Aide : 
+**Aide :** 
 
 ![roman_numerals](https://jeretiens.net/wp-content/uploads/2015/12/les_chiffres_romains.jpg)
 
