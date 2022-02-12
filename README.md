@@ -47,32 +47,33 @@ Cependant, malgré son incroyable efficience, elle est souvent mal comprise.
 
 ![Red green refactor](https://www.thinktocode.com/wp-content/uploads/2018/02/red-green-refactor.png)
 
-1️⃣ On commence par RED. Dans cette phase, on va écrire un test qui ne passe pas (s’il ne compile pas, il ne passe pas). À ce moment, on ne se concentre que sur la logique des APIs (exposition des methods, organisation des classes) que l'on veut appeler : est-ce que si j'appelle cet Objet de cette manière cela traduit bien l'intention métier du traitement que je veux faire ?
+1️⃣ On commence par RED. Dans cette phase, on va écrire un test qui ne passe pas (s’il ne compile pas, il ne passe pas). À ce moment, on ne se concentre que sur l'intention que l'on veut donner à cette méthode, la logique métier.
 
-2️⃣ Vient ensuite la phase GREEN, ici on va écrire le code le plus direct pour faire passer notre test (sans casser un test précédent).
+2️⃣ Vient ensuite la phase GREEN, ici on va écrire le code le simple possible pour faire passer notre test (sans casser un test précédent).
 
-3️⃣ On termine le cycle avec REFACTOR où on va retravailler notre code pour :
+3️⃣ On termine le cycle avec le REFACTORING, où on va retravailler notre code pour :
 
- - Avoir du code plus élégant ;
- - Mieux expliciter les traitements qui sont faits ;
- - Apporter une meilleure réponse au métier.
+ - Avoir un code plus élégant, plus lisible ;
+ - Améliorer le design ;
+ - Expliciter au mieux les traitements qui y sont faits ;
+ - Supprimer les duplications...
 
 ➡️ On répète ce cycle toutes les quelques secondes voire minutes. Il n'est absolument pas question ici de cycle sur plusieurs jours. On fait plusieurs centaines de cycles de TDD dans une journée !
 
 ### Comment ?
 Il peut être décrit succinctement par l'ensemble des règles suivantes :
 
-1. Ecrire un "seul" test unitaire décrivant un aspect du programme
+1. Ecrire un "seul" test décrivant un comportement
 2. Exécuter le test, qui doit échouer parce que le programme n'a pas cette fonctionnalité
 3. écrire "juste assez" de code, le plus simple possible, pour faire passer le test
-"remanier" le code jusqu'à ce qu'il soit conforme aux critères de simplicité
-4. répéter, en "accumulant" les tests unitaires au fil du temps.
+4. "remanier" le code jusqu'à ce qu'il soit qualitatif
+4. répéter, en "accumulant" les tests et donc les règles du comportement attendu.
 
 ### Avantages
- - Meilleure conception du programme et meilleure qualité du code (petites fonctions, principes DRY)
+ - Meilleure architecture du programme et meilleure qualité du code (petites fonctions, principes DRY)
  - réductions significatives des taux de défauts
  - Augmente la compréhension du code (documentation détaillée du projet)
- - permet de mettre en évidence la marge dans tous les cas
+ - permet de mettre en évidence les cas à la marge
  - réduit le temps nécessaire au développement du projet (feedback rapide, moins de bugs ou d'erreurs)
 
 ### Tips
