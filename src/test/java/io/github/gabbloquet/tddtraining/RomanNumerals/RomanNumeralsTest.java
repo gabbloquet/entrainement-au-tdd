@@ -10,61 +10,61 @@ public class RomanNumeralsTest {
 
   @Test
   void shoud_convert_to_I() {
-    assertEquals("I", romanNumerals.convert(1));
-    assertEquals("II", romanNumerals.convert(2));
-    assertEquals("III", romanNumerals.convert(3));
+    assertEquals("I", romanNumerals.toRoman(1));
+    assertEquals("II", romanNumerals.toRoman(2));
+    assertEquals("III", romanNumerals.toRoman(3));
   }
 
   @Test
   void shoud_convert_to_V() {
-    assertEquals("IV", romanNumerals.convert(4));
-    assertEquals("V", romanNumerals.convert(5));
-    assertEquals("VII", romanNumerals.convert(7));
+    assertEquals("IV", romanNumerals.toRoman(4));
+    assertEquals("V", romanNumerals.toRoman(5));
+    assertEquals("VII", romanNumerals.toRoman(7));
   }
 
   @Test
   void shoud_convert_to_X() {
-    assertEquals("IX", romanNumerals.convert(9));
-    assertEquals("X", romanNumerals.convert(10));
-    assertEquals("XII", romanNumerals.convert(12));
-    assertEquals("XVII", romanNumerals.convert(17));
-    assertEquals("XXX", romanNumerals.convert(30));
+    assertEquals("IX", romanNumerals.toRoman(9));
+    assertEquals("X", romanNumerals.toRoman(10));
+    assertEquals("XII", romanNumerals.toRoman(12));
+    assertEquals("XVII", romanNumerals.toRoman(17));
+    assertEquals("XXX", romanNumerals.toRoman(30));
   }
 
   @Test
   void shoud_convert_to_L() {
-    assertEquals("XL", romanNumerals.convert(40));
-    assertEquals("L", romanNumerals.convert(50));
-    assertEquals("LXI", romanNumerals.convert(61));
-    assertEquals("LXXX", romanNumerals.convert(80));
+    assertEquals("XL", romanNumerals.toRoman(40));
+    assertEquals("L", romanNumerals.toRoman(50));
+    assertEquals("LXI", romanNumerals.toRoman(61));
+    assertEquals("LXXX", romanNumerals.toRoman(80));
   }
 
   @Test
   void shoud_convert_to_C() {
-    assertEquals("XC", romanNumerals.convert(90));
-    assertEquals("C", romanNumerals.convert(100));
-    assertEquals("CC", romanNumerals.convert(200));
+    assertEquals("XC", romanNumerals.toRoman(90));
+    assertEquals("C", romanNumerals.toRoman(100));
+    assertEquals("CC", romanNumerals.toRoman(200));
   }
 
   @Test
   void shoud_convert_to_D() {
-    assertEquals("CD", romanNumerals.convert(400));
-    assertEquals("D", romanNumerals.convert(500));
-    assertEquals("DCC", romanNumerals.convert(700));
+    assertEquals("CD", romanNumerals.toRoman(400));
+    assertEquals("D", romanNumerals.toRoman(500));
+    assertEquals("DCC", romanNumerals.toRoman(700));
   }
 
   @Test
   void shoud_convert_to_M() {
-    assertEquals("CM", romanNumerals.convert(900));
-    assertEquals("M", romanNumerals.convert(1000));
-    assertEquals("MM", romanNumerals.convert(2000));
+    assertEquals("CM", romanNumerals.toRoman(900));
+    assertEquals("M", romanNumerals.toRoman(1000));
+    assertEquals("MM", romanNumerals.toRoman(2000));
   }
 
   @Test
   void shoud_convert_to_complexe_numbers() {
-    assertEquals("DCCCXLVII", romanNumerals.convert(847));
-    assertEquals("MLIII", romanNumerals.convert(1053));
-    assertEquals("MDCCLXXVI", romanNumerals.convert(1776));
-    assertEquals("MMXVIII", romanNumerals.convert(2018));
+    assertEquals("DCCCXLVII", romanNumerals.toRoman(847));
+    assertEquals("MLIII", romanNumerals.toRoman(1053));
+    assertEquals("MDCCLXXVI", romanNumerals.toRoman(1776));
+    assertEquals("MMXVIII", romanNumerals.toRoman(2018));
   }
 }

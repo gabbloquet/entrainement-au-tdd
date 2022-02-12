@@ -20,7 +20,7 @@ public class RomanNumerals {
     new Combinaison("I", 1)
   );
 
-  public String convert(int arabicNumber) {
+  public String toRoman(int arabicNumber) {
     StringBuilder convertedNumber = new StringBuilder();
 
     while (arabicNumber > 0) {
