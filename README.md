@@ -20,6 +20,7 @@ Pour vous entrainer, rien de plus simple !
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
 2. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
 3. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
+3. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
 4. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
 5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
 6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
