@@ -1,11 +1,10 @@
 package io.github.gabbloquet.tddtraining.RomanNumerals;
 
-import io.github.gabbloquet.tddtraining.Stack.UnderflowException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RomanNumeralsTest {
+public class ToRomanTest {
 
   RomanNumerals romanNumerals = new RomanNumerals();
 

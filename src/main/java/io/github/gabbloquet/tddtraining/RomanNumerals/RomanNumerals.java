@@ -39,4 +39,20 @@ public class RomanNumerals {
 
     return convertedNumber.toString();
   }
+
+  public int toArabic(String romanNumber) {
+    int arabicNumber = 0;
+
+    while (romanNumber.length() > 0) {
+      for (Combinaison conversion : conversions) {
+        if(romanNumber.startsWith(conversion.romanValue())) {
+          arabicNumber += conversion.arabicValue();
+          romanNumber = romanNumber.replaceFirst(conversion.romanValue(), "");
+          break;
+        }
+      }
+    }
+
+    return arabicNumber;
+  }
 }
