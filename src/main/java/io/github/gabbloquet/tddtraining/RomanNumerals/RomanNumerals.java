@@ -20,8 +20,12 @@ public class RomanNumerals {
     new Combinaison("I", 1)
   );
 
-  public String toRoman(int arabicNumber) {
+  public String toRoman(int arabicNumber) throws UnconvertibleException {
     StringBuilder convertedNumber = new StringBuilder();
+
+    if(arabicNumber < 1){
+      throw new UnconvertibleException();
+    }
 
     while (arabicNumber > 0) {
       for (Combinaison conversion : conversions) {
