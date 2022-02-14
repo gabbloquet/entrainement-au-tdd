@@ -20,7 +20,6 @@ Pour vous entrainer, rien de plus simple !
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
 2. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
 3. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
-3. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
 4. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
 5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
 6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
@@ -29,10 +28,11 @@ Pour vous entrainer, rien de plus simple !
 
 **Moyen**
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
-2. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
+2. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
 3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
-3. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
-4. 🚧 
+4. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
+5. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
+6. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)

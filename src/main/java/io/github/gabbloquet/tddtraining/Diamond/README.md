@@ -1,10 +1,12 @@
 # Diamond / Diamant
 
-**Niveau :** Facile
+**Niveau :** Moyen
 
 ## Énoncé
 
-Étant donné une lettre, imprimez un diamant commençant par 'A' avec la lettre fournie au point le plus large.
+L'énoncé de ce kata est court : 
+
+> Étant donné une lettre, imprimez un diamant commençant par 'A' avec la lettre fournie au point le plus large.
 
 **Par exemple** : Pour la lettre `E`
 
