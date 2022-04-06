@@ -23,7 +23,16 @@ public class TennisGame {
         return "A 0 0 0 0 0 0 B 0 0 0 0 0 advantage";
       return "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce";
     }
+    if(isAWonGame()) {
+      if(playerAPoints > playerBPoints)
+        return "A 1 0 0 0 0 0 B 0 0 0 0 0 0";
+      return "A 0 0 0 0 0 0 B 1 0 0 0 0 0";
+    }
     return "A 0 0 0 0 0 " + pointsCorrespondence.get(playerAPoints) + " B 0 0 0 0 0 " + pointsCorrespondence.get(playerBPoints);
+  }
+
+  private boolean isAWonGame() {
+    return playerAPoints > 3 || playerBPoints > 3;
   }
 
   private boolean isAContestedGame() {

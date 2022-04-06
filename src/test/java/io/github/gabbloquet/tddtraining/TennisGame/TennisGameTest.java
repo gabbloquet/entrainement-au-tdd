@@ -38,4 +38,13 @@ public class TennisGameTest {
     Assertions.assertEquals("A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce", aBasicDeuceGame.getScore());
   }
 
+  @Test
+  void should_win_a_game() {
+    TennisGame aWonAGame = new TennisGame("A,A,A,A");
+    Assertions.assertEquals("A 1 0 0 0 0 0 B 0 0 0 0 0 0", aWonAGame.getScore());
+
+    TennisGame bWonAGame = new TennisGame("B,B,B,A,B");
+    Assertions.assertEquals("A 0 0 0 0 0 0 B 1 0 0 0 0 0", bWonAGame.getScore());
+  }
+
 }
