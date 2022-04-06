@@ -16,11 +16,11 @@ public class TennisGameTest {
     TennisGame aWonApoint = new TennisGame("A");
     Assertions.assertEquals("A 0 0 0 0 0 15 B 0 0 0 0 0 0", aWonApoint.getScore());
 
-    TennisGame aWonTwoPoints = new TennisGame("A,A");
-    Assertions.assertEquals("A 0 0 0 0 0 30 B 0 0 0 0 0 0", aWonTwoPoints.getScore());
+    TennisGame bWonTwoPoints = new TennisGame("B,B");
+    Assertions.assertEquals("A 0 0 0 0 0 0 B 0 0 0 0 0 30", bWonTwoPoints.getScore());
 
-    TennisGame aWonThreePoints = new TennisGame("A,A,A");
-    Assertions.assertEquals("A 0 0 0 0 0 40 B 0 0 0 0 0 0", aWonThreePoints.getScore());
+    TennisGame aWonThreePointsBOne = new TennisGame("A,A,A,B");
+    Assertions.assertEquals("A 0 0 0 0 0 40 B 0 0 0 0 0 15", aWonThreePointsBOne.getScore());
   }
 
 }
