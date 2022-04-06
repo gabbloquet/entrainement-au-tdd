@@ -1,17 +1,15 @@
 package io.github.gabbloquet.tddtraining.TennisGame;
 
-import com.google.common.base.CharMatcher;
-
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TennisGame {
 
   private final String[] points;
   private int playerAPoints = 0;
   private int playerBPoints = 0;
-  private int playerBGames = 0;
-  private int playerAGames = 0;
+  private List<Integer> playerAGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
+  private List<Integer> playerBGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
   private final Map<Integer, String> pointsCorrespondence = Map.of(0, "0", 1, "15", 2, "30", 3, "40");
 
   public TennisGame(String match) {
@@ -27,11 +25,19 @@ public class TennisGame {
       }
       if(isAWonGame()) {
         if(playerAPoints > playerBPoints){
-          this.playerAGames = this.playerAGames + 1;
+          if(playerAGames.get(0) == 6) {
+            playerAGames.set(1, 1);
+          } else {
+            playerAGames.set(0, playerAGames.get(0) + 1);
+          }
           this.playerAPoints = this.playerAPoints - 4;
           this.playerBPoints = 0;
         } else {
-          this.playerBGames = this.playerBGames + 1;
+          if(playerBGames.get(0) == 6) {
+            playerBGames.set(1, 1);
+          } else {
+            playerBGames.set(0, playerBGames.get(0) + 1);
+          }
           this.playerBPoints = this.playerBPoints - 4;
           this.playerAPoints = 0;
         }
@@ -39,13 +45,18 @@ public class TennisGame {
     }
 
     return "A " +
-      playerAGames +
-      " 0 0 0 0 " +
+      getSets(playerAGames) + " " +
       getPlayerRunningGameScore(playerAPoints, playerBPoints) +
       " B " +
-      playerBGames +
-      " 0 0 0 0 " +
+      getSets(playerBGames) + " " +
       getPlayerRunningGameScore(playerBPoints, playerAPoints);
+  }
+
+  private String getSets(List<Integer> playerGames) {
+    return playerGames
+      .stream()
+      .map(Object::toString)
+      .collect(Collectors.joining(" "));
   }
 
   private String getPlayerRunningGameScore(int firstPlayerPoints, int secondPlayerPoints) {

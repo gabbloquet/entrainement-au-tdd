@@ -53,4 +53,10 @@ public class TennisGameTest {
     Assertions.assertEquals("A 2 0 0 0 0 0 B 1 0 0 0 0 0", aWonTwoGamesBone.getScore());
   }
 
+  @Test
+  void should_win_sets() {
+    TennisGame aWonASetAndAGame = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 6 1 0 0 0 0 B 0 0 0 0 0 0", aWonASetAndAGame.getScore());
+  }
+
 }
