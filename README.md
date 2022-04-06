@@ -32,7 +32,8 @@ Pour vous entrainer, rien de plus simple !
 3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
 4. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
 5. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
-6. 🚧 
+6. [TennisScore](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
+7. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
