@@ -39,12 +39,18 @@ public class TennisGameTest {
   }
 
   @Test
-  void should_win_a_game() {
+  void should_win_games() {
     TennisGame aWonAGame = new TennisGame("A,A,A,A");
     Assertions.assertEquals("A 1 0 0 0 0 0 B 0 0 0 0 0 0", aWonAGame.getScore());
 
     TennisGame bWonAGame = new TennisGame("B,B,B,A,B");
     Assertions.assertEquals("A 0 0 0 0 0 0 B 1 0 0 0 0 0", bWonAGame.getScore());
+
+    TennisGame aWonFourGames = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 4 0 0 0 0 0 B 0 0 0 0 0 0", aWonFourGames.getScore());
+
+    TennisGame aWonTwoGamesBone = new TennisGame("A,A,A,B,A,A,A,A,B,A,B,B,A,B,B");
+    Assertions.assertEquals("A 2 0 0 0 0 0 B 1 0 0 0 0 0", aWonTwoGamesBone.getScore());
   }
 
 }

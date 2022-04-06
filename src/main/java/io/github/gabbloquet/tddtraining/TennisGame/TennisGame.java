@@ -3,39 +3,74 @@ package io.github.gabbloquet.tddtraining.TennisGame;
 import com.google.common.base.CharMatcher;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class TennisGame {
 
-  private final int playerAPoints;
-  private final int playerBPoints;
+  private final String[] points;
+  private int playerAPoints = 0;
+  private int playerBPoints = 0;
+  private int playerBGames = 0;
+  private int playerAGames = 0;
   private final Map<Integer, String> pointsCorrespondence = Map.of(0, "0", 1, "15", 2, "30", 3, "40");
 
   public TennisGame(String match) {
-    this.playerAPoints = CharMatcher.is('A').countIn(match);
-    this.playerBPoints = CharMatcher.is('B').countIn(match);
+    this.points = match.split(",");
   }
 
   public String getScore() {
-    if(isAContestedGame()){
-      if(playerAPoints > playerBPoints)
-        return "A 0 0 0 0 0 advantage B 0 0 0 0 0 0";
-      else if(playerAPoints < playerBPoints)
-        return "A 0 0 0 0 0 0 B 0 0 0 0 0 advantage";
-      return "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce";
+    for (String point : points) {
+      if(Objects.equals(point, "A")){
+        playerAPoints++;
+      } else if(Objects.equals(point, "B")){
+        playerBPoints++;
+      }
+      if(isAWonGame()) {
+        if(playerAPoints > playerBPoints){
+          this.playerAGames = this.playerAGames + 1;
+          this.playerAPoints = this.playerAPoints - 4;
+          this.playerBPoints = 0;
+        } else {
+          this.playerBGames = this.playerBGames + 1;
+          this.playerBPoints = this.playerBPoints - 4;
+          this.playerAPoints = 0;
+        }
+      }
     }
-    if(isAWonGame()) {
-      if(playerAPoints > playerBPoints)
-        return "A 1 0 0 0 0 0 B 0 0 0 0 0 0";
-      return "A 0 0 0 0 0 0 B 1 0 0 0 0 0";
+
+    return "A " +
+      playerAGames +
+      " 0 0 0 0 " +
+      getPlayerRunningGameScore(playerAPoints, playerBPoints) +
+      " B " +
+      playerBGames +
+      " 0 0 0 0 " +
+      getPlayerRunningGameScore(playerBPoints, playerAPoints);
+  }
+
+  private String getPlayerRunningGameScore(int firstPlayerPoints, int secondPlayerPoints) {
+    if(isAnEquality(firstPlayerPoints, secondPlayerPoints))
+      return "deuce";
+
+    if(isAContestedGame(firstPlayerPoints, secondPlayerPoints)){
+      if(firstPlayerPoints > secondPlayerPoints)
+        return "advantage";
+      return pointsCorrespondence.get(0);
     }
-    return "A 0 0 0 0 0 " + pointsCorrespondence.get(playerAPoints) + " B 0 0 0 0 0 " + pointsCorrespondence.get(playerBPoints);
+
+    return pointsCorrespondence.get(firstPlayerPoints);
+  }
+
+  private boolean isAnEquality(int firstPlayerPoints, int secondPlayerPoints) {
+    return firstPlayerPoints == secondPlayerPoints && firstPlayerPoints > 0;
   }
 
   private boolean isAWonGame() {
-    return playerAPoints > 3 || playerBPoints > 3;
+    return (playerAPoints > 3 || playerBPoints > 3) &&
+      ((playerAPoints - playerBPoints > 1) || (playerBPoints - playerAPoints > 1));
   }
 
-  private boolean isAContestedGame() {
-    return playerAPoints > 2 && playerBPoints > 2;
+  private boolean isAContestedGame(int firstPlayerPoints, int secondPlayerPoints) {
+    return firstPlayerPoints > 2 && secondPlayerPoints > 2;
   }
 }

@@ -88,7 +88,7 @@ sortie : A 1 0 0 0 0 0 B 3 0 0 0 0 0
 entrée :  
 sortie : A 4 0 0 0 0 0 B 6 0 0 0 0 0
 
-### Étape 3 - Affichage du score pour plusieurs ensembles
+### Étape 3 - Affichage du score pour plusieurs sets
 
 entrée :  
 sortie : A 4 3 0 0 0 0 B 6 2 0 0 0 0
