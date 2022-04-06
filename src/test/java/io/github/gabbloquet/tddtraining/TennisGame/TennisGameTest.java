@@ -65,4 +65,13 @@ public class TennisGameTest {
     Assertions.assertEquals("A 7 0 0 0 0 0 B 5 0 0 0 0 0", aWonASetWith7Games.getScore());
   }
 
+  @Test
+  void should_play_a_tie_break() {
+    TennisGame aWonTheTieBreak = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 7 0 0 0 0 0 B 6 0 0 0 0 0", aWonTheTieBreak.getScore());
+
+    TennisGame bWonAContestedTieBreak = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,B,B,B,B,B,B,B,B");
+    Assertions.assertEquals("A 6 0 0 0 0 0 B 7 0 0 0 0 0", bWonAContestedTieBreak.getScore());
+  }
+
 }

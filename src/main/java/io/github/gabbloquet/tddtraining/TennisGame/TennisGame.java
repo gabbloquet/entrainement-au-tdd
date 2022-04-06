@@ -20,12 +20,25 @@ public class TennisGame {
     int playerBPoints = 0;
 
     for (String point : points) {
+
       if(Objects.equals(point, "A")){
         playerAPoints++;
       } else if(Objects.equals(point, "B")){
         playerBPoints++;
       }
-      if(isAWonGame(playerAPoints, playerBPoints)) {
+
+      if(isATieBreak(playerAGames, playerBGames, runningSet)){
+        if(playerWonTheTieBreak(playerAPoints, playerBPoints)){
+          playerAGames.set(runningSet, playerAGames.get(runningSet) + 1);
+          playerAPoints = 0;
+          playerBPoints = 0;
+        }
+        if(playerWonTheTieBreak(playerBPoints, playerAPoints)){
+          playerBGames.set(runningSet, playerBGames.get(runningSet) + 1);
+          playerAPoints = 0;
+          playerBPoints = 0;
+        }
+      } else if(isAWonGame(playerAPoints, playerBPoints)) {
         if(playerAPoints > playerBPoints){
           addGameToScoreboard(playerAGames, playerBGames);
           playerAPoints = playerAPoints - 4;
@@ -39,11 +52,19 @@ public class TennisGame {
     }
 
     return "A " +
-      getSets(playerAGames) + " " +
+      displaySets(playerAGames) + " " +
       getPlayerRunningGameScore(playerAPoints, playerBPoints) +
       " B " +
-      getSets(playerBGames) + " " +
+      displaySets(playerBGames) + " " +
       getPlayerRunningGameScore(playerBPoints, playerAPoints);
+  }
+
+  private boolean playerWonTheTieBreak(int winner, int loser) {
+    return winner > 6 && (winner - loser > 1);
+  }
+
+  private boolean isATieBreak(List<Integer> playerAGames, List<Integer> playerBGames, int runningSet) {
+    return playerAGames.get(runningSet) == 6 && playerBGames.get(runningSet) == 6;
   }
 
   private void addGameToScoreboard(List<Integer> playerGames, List<Integer> opponentsGames) {
@@ -55,7 +76,7 @@ public class TennisGame {
     }
   }
 
-  private String getSets(List<Integer> playerGames) {
+  private String displaySets(List<Integer> playerGames) {
     return playerGames
       .stream()
       .map(Object::toString)
