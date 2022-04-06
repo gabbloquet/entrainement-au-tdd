@@ -41,13 +41,11 @@ public class TennisGame {
       } else if(isAWonGame(playerAPoints, playerBPoints)) {
         if(playerAPoints > playerBPoints){
           addGameToScoreboard(playerAGames, playerBGames);
-          playerAPoints = playerAPoints - 4;
-          playerBPoints = 0;
         } else {
           addGameToScoreboard(playerBGames, playerAGames);
-          playerBPoints = playerBPoints - 4;
-          playerAPoints = 0;
         }
+        playerBPoints = 0;
+        playerAPoints = 0;
       }
     }
 
@@ -64,16 +62,20 @@ public class TennisGame {
   }
 
   private boolean isATieBreak(List<Integer> playerAGames, List<Integer> playerBGames, int runningSet) {
-    return playerAGames.get(runningSet) == 6 && playerBGames.get(runningSet) == 6;
+    return playerAGames.get(runningSet) == 6 && playerBGames.get(runningSet) == 6 && runningSet != 4;
   }
 
   private void addGameToScoreboard(List<Integer> playerGames, List<Integer> opponentsGames) {
-    if(playerGames.get(runningSet) == 6 && opponentsGames.get(runningSet) < 5) {
+    if(playerWonTheSet(playerGames, opponentsGames)) {
+      playerGames.set(runningSet, playerGames.get(runningSet) + 1);
       this.runningSet++;
-      playerGames.set(runningSet, 1);
     } else {
       playerGames.set(runningSet, playerGames.get(runningSet) + 1);
     }
+  }
+
+  private boolean playerWonTheSet(List<Integer> playerGames, List<Integer> opponentsGames) {
+    return playerGames.get(runningSet) == 5 && opponentsGames.get(runningSet) < 5;
   }
 
   private String displaySets(List<Integer> playerGames) {

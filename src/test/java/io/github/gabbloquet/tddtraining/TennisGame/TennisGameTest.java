@@ -40,15 +40,6 @@ public class TennisGameTest {
 
   @Test
   void should_win_games() {
-    TennisGame aWonAGame = new TennisGame("A,A,A,A");
-    Assertions.assertEquals("A 1 0 0 0 0 0 B 0 0 0 0 0 0", aWonAGame.getScore());
-
-    TennisGame bWonAGame = new TennisGame("B,B,B,A,B");
-    Assertions.assertEquals("A 0 0 0 0 0 0 B 1 0 0 0 0 0", bWonAGame.getScore());
-
-    TennisGame aWonFourGames = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A");
-    Assertions.assertEquals("A 4 0 0 0 0 0 B 0 0 0 0 0 0", aWonFourGames.getScore());
-
     TennisGame aWonTwoGamesBone = new TennisGame("A,A,A,B,A,A,A,A,B,A,B,B,A,B,B");
     Assertions.assertEquals("A 2 0 0 0 0 0 B 1 0 0 0 0 0", aWonTwoGamesBone.getScore());
   }
@@ -72,6 +63,15 @@ public class TennisGameTest {
 
     TennisGame bWonAContestedTieBreak = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,B,B,B,B,B,B,B,B");
     Assertions.assertEquals("A 6 0 0 0 0 0 B 7 0 0 0 0 0", bWonAContestedTieBreak.getScore());
+  }
+
+  @Test
+  void should_play_a_full_match() {
+    TennisGame aWonTheGameEasily = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 6 1 6 6 0 0 B 2 6 0 0 0 0", aWonTheGameEasily.getScore());
+
+    TennisGame aWonAContestedMatch = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 6 1 6 1 8 0 B 2 6 2 6 6 0", aWonAContestedMatch.getScore());
   }
 
 }

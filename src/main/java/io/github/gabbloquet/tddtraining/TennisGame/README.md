@@ -51,9 +51,9 @@ Sortie : le score String[][]
 
 ### Exemple pour les joueurs A et B
 
-entrée : `A,A,A,B,A,B,B,A`
+**entrée** : `A,A,A,B,A,B,B,A`
 
-sortie :
+**sortie** :
 ```text
 A 1 0 0 0 0 15
 B 0 0 0 0 0 30
@@ -62,52 +62,55 @@ B 0 0 0 0 0 30
 
 ### Étape 1 - Afficher le score d'un jeu
 
-entrée : A  
-sortie : A 0 0 0 0 0 15 B 0 0 0 0 0 0
+**entrée** : vide  
+**sortie** : A 0 0 0 0 0 0 B 0 0 0 0 0 0
 
-entrée : A,B,A,B,A  
-sortie : A 0 0 0 0 0 40 B 0 0 0 0 0 30
+**entrée** : A  
+**sortie** : A 0 0 0 0 0 15 B 0 0 0 0 0 0
 
-entrée : A,B,A,B,A,A  
-sortie : A 1 0 0 0 0 0 B 0 0 0 0 0 0
+**entrée** : A,B,A,B,A  
+**sortie** : A 0 0 0 0 0 40 B 0 0 0 0 0 30
+
+**entrée** : A,B,A,B,A,A  
+**sortie** : A 1 0 0 0 0 0 B 0 0 0 0 0 0
 
 Entrée : A,B,A,B,A,B,A  
-sortie : A 0 0 0 0 0 avantage B 0 0 0 0 0 0
+**sortie** : A 0 0 0 0 0 avantage B 0 0 0 0 0 0
 
-entrée : A,B,A,B,A,B,A,B  
-sortie : A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce
-
-entrée : vide  
-sortie : A 0 0 0 0 0 0 B 0 0 0 0 0 0
+**entrée** : A,B,A,B,A,B,A,B  
+**sortie** : A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce
 
 ### Étape 2 - Afficher le score d'un set
 
-entrée :  
-sortie : A 1 0 0 0 0 0 B 3 0 0 0 0 0
+**entrée** : A,A,A,A  
+**sortie** : A 1 0 0 0 0 0 B 0 0 0 0 0 0"
 
-entrée :  
-sortie : A 4 0 0 0 0 0 B 6 0 0 0 0 0
+**entrée** : A,A,A,B,A,A,A,A,B,A,B,B,A,B,B  
+**sortie** : A 2 0 0 0 0 0 B 1 0 0 0 0 0
 
 ### Étape 3 - Affichage du score pour plusieurs sets
 
-entrée :  
-sortie : A 4 3 0 0 0 0 B 6 2 0 0 0 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A  
+**sortie** : A 6 1 0 0 0 0 B 0 0 0 0 0 0"
 
-entrée :  
-sortie : A 4 6 5 0 0 0 B 6 2 1 0 0 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B  
+**sortie** : A 6 1 0 0 0 0 B 2 6 0 0 0 0
 
-entrée :  
-sortie : A 4 6 5 0 0 0 B 6 2 7 0 0 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A  
+**sortie** : A 7 0 0 0 0 0 B 5 0 0 0 0 0
 
 ### Etape 4- Affichage du score avec tie break
 
-entrée :  
-sortie : A 4 6 5 7 0 0 B 6 2 7 6 0 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,A  
+**sortie** : A 7 0 0 0 0 0 B 6 0 0 0 0 0
+
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,B,B,B,B,B,B,B,B    
+**sortie** : A 6 0 0 0 0 0 B 7 0 0 0 0 0
 
 ### Etape 5 - Affichage du score pour 5 sets
 
-entrée :  
-sortie : A 4 6 6 7 6 0 B 6 2 3 6 4 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A  
+**sortie** : A 6 1 6 6 0 0 B 2 6 0 0 0 0
 
-entrée :  
-sortie : A 4 6 6 7 10 0 B 6 2 3 6 8 0
+**entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,A,A  
+**sortie** : A 6 1 6 1 8 0 B 2 6 2 6 6 0
