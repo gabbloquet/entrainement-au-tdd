@@ -57,6 +57,12 @@ public class TennisGameTest {
   void should_win_sets() {
     TennisGame aWonASetAndAGame = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A");
     Assertions.assertEquals("A 6 1 0 0 0 0 B 0 0 0 0 0 0", aWonASetAndAGame.getScore());
+
+    TennisGame aWonASetAndBWonASet = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B");
+    Assertions.assertEquals("A 6 1 0 0 0 0 B 2 6 0 0 0 0", aWonASetAndBWonASet.getScore());
+
+    TennisGame aWonASetWith7Games = new TennisGame("A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A");
+    Assertions.assertEquals("A 7 0 0 0 0 0 B 5 0 0 0 0 0", aWonASetWith7Games.getScore());
   }
 
 }

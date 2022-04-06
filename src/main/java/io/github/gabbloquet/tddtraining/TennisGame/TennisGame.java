@@ -6,10 +6,9 @@ import java.util.stream.Collectors;
 public class TennisGame {
 
   private final String[] points;
-  private int playerAPoints = 0;
-  private int playerBPoints = 0;
-  private List<Integer> playerAGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
-  private List<Integer> playerBGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
+  private int runningSet = 0;
+  private final List<Integer> playerAGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
+  private final List<Integer> playerBGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
   private final Map<Integer, String> pointsCorrespondence = Map.of(0, "0", 1, "15", 2, "30", 3, "40");
 
   public TennisGame(String match) {
@@ -17,29 +16,24 @@ public class TennisGame {
   }
 
   public String getScore() {
+    int playerAPoints = 0;
+    int playerBPoints = 0;
+
     for (String point : points) {
       if(Objects.equals(point, "A")){
         playerAPoints++;
       } else if(Objects.equals(point, "B")){
         playerBPoints++;
       }
-      if(isAWonGame()) {
+      if(isAWonGame(playerAPoints, playerBPoints)) {
         if(playerAPoints > playerBPoints){
-          if(playerAGames.get(0) == 6) {
-            playerAGames.set(1, 1);
-          } else {
-            playerAGames.set(0, playerAGames.get(0) + 1);
-          }
-          this.playerAPoints = this.playerAPoints - 4;
-          this.playerBPoints = 0;
+          addGameToScoreboard(playerAGames, playerBGames);
+          playerAPoints = playerAPoints - 4;
+          playerBPoints = 0;
         } else {
-          if(playerBGames.get(0) == 6) {
-            playerBGames.set(1, 1);
-          } else {
-            playerBGames.set(0, playerBGames.get(0) + 1);
-          }
-          this.playerBPoints = this.playerBPoints - 4;
-          this.playerAPoints = 0;
+          addGameToScoreboard(playerBGames, playerAGames);
+          playerBPoints = playerBPoints - 4;
+          playerAPoints = 0;
         }
       }
     }
@@ -50,6 +44,15 @@ public class TennisGame {
       " B " +
       getSets(playerBGames) + " " +
       getPlayerRunningGameScore(playerBPoints, playerAPoints);
+  }
+
+  private void addGameToScoreboard(List<Integer> playerGames, List<Integer> opponentsGames) {
+    if(playerGames.get(runningSet) == 6 && opponentsGames.get(runningSet) < 5) {
+      this.runningSet++;
+      playerGames.set(runningSet, 1);
+    } else {
+      playerGames.set(runningSet, playerGames.get(runningSet) + 1);
+    }
   }
 
   private String getSets(List<Integer> playerGames) {
@@ -76,7 +79,7 @@ public class TennisGame {
     return firstPlayerPoints == secondPlayerPoints && firstPlayerPoints > 0;
   }
 
-  private boolean isAWonGame() {
+  private boolean isAWonGame(int playerAPoints, int playerBPoints) {
     return (playerAPoints > 3 || playerBPoints > 3) &&
       ((playerAPoints - playerBPoints > 1) || (playerBPoints - playerAPoints > 1));
   }
