@@ -80,7 +80,7 @@ sortie : A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce
 entrée : vide  
 sortie : A 0 0 0 0 0 0 B 0 0 0 0 0 0
 
-### Étape 2 - Afficher le score d'un ensemble
+### Étape 2 - Afficher le score d'un set
 
 entrée :  
 sortie : A 1 0 0 0 0 0 B 3 0 0 0 0 0
