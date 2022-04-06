@@ -23,4 +23,19 @@ public class TennisGameTest {
     Assertions.assertEquals("A 0 0 0 0 0 40 B 0 0 0 0 0 15", aWonThreePointsBOne.getScore());
   }
 
+  @Test
+  void should_score_an_advantage() {
+    TennisGame aHasTheAdvantage = new TennisGame("A,B,A,B,A,B,A");
+    Assertions.assertEquals("A 0 0 0 0 0 advantage B 0 0 0 0 0 0", aHasTheAdvantage.getScore());
+
+    TennisGame bHasTheAdvantage = new TennisGame("A,B,A,B,A,B,B");
+    Assertions.assertEquals("A 0 0 0 0 0 0 B 0 0 0 0 0 advantage", bHasTheAdvantage.getScore());
+  }
+
+  @Test
+  void should_score_a_deuce() {
+    TennisGame aBasicDeuceGame = new TennisGame("A,B,A,B,A,B,A,B,A,B");
+    Assertions.assertEquals("A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce", aBasicDeuceGame.getScore());
+  }
+
 }

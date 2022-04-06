@@ -16,6 +16,17 @@ public class TennisGame {
   }
 
   public String getScore() {
+    if(isAContestedGame()){
+      if(playerAPoints > playerBPoints)
+        return "A 0 0 0 0 0 advantage B 0 0 0 0 0 0";
+      else if(playerAPoints < playerBPoints)
+        return "A 0 0 0 0 0 0 B 0 0 0 0 0 advantage";
+      return "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce";
+    }
     return "A 0 0 0 0 0 " + pointsCorrespondence.get(playerAPoints) + " B 0 0 0 0 0 " + pointsCorrespondence.get(playerBPoints);
+  }
+
+  private boolean isAContestedGame() {
+    return playerAPoints > 2 && playerBPoints > 2;
   }
 }
