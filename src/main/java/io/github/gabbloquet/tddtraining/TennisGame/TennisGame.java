@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 public class TennisGame {
 
   private final String[] points;
-  private int runningSet = 0;
   private final List<Integer> playerAGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
   private final List<Integer> playerBGames = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0));
   private final Map<Integer, String> pointsCorrespondence = Map.of(0, "0", 1, "15", 2, "30", 3, "40");
@@ -16,10 +15,12 @@ public class TennisGame {
   }
 
   public String getScore() {
+    int runningSet = 0;
     int playerAPoints = 0;
     int playerBPoints = 0;
 
     for (String point : points) {
+      boolean shouldAddASet;
 
       if(Objects.equals(point, "A")){
         playerAPoints++;
@@ -40,9 +41,13 @@ public class TennisGame {
         }
       } else if(isAWonGame(playerAPoints, playerBPoints)) {
         if(playerAPoints > playerBPoints){
-          addGameToScoreboard(playerAGames, playerBGames);
+          shouldAddASet = addGameToScoreboard(playerAGames, playerBGames, runningSet);
         } else {
-          addGameToScoreboard(playerBGames, playerAGames);
+          shouldAddASet = addGameToScoreboard(playerBGames, playerAGames, runningSet);
+        }
+
+        if(shouldAddASet){
+          runningSet++;
         }
         playerBPoints = 0;
         playerAPoints = 0;
@@ -65,17 +70,18 @@ public class TennisGame {
     return playerAGames.get(runningSet) == 6 && playerBGames.get(runningSet) == 6 && runningSet != 4;
   }
 
-  private void addGameToScoreboard(List<Integer> playerGames, List<Integer> opponentsGames) {
-    if(playerWonTheSet(playerGames, opponentsGames)) {
+  private boolean addGameToScoreboard(List<Integer> playerGames, List<Integer> opponentsGames, int runningSet) {
+    if(playerWonTheSet(playerGames.get(runningSet), opponentsGames.get(runningSet))) {
       playerGames.set(runningSet, playerGames.get(runningSet) + 1);
-      this.runningSet++;
+      return true;
     } else {
       playerGames.set(runningSet, playerGames.get(runningSet) + 1);
     }
+    return false;
   }
 
-  private boolean playerWonTheSet(List<Integer> playerGames, List<Integer> opponentsGames) {
-    return playerGames.get(runningSet) == 5 && opponentsGames.get(runningSet) < 5;
+  private boolean playerWonTheSet(int playerScore, int opponentScore) {
+    return playerScore == 5 && opponentScore < 5;
   }
 
   private String displaySets(List<Integer> playerGames) {
