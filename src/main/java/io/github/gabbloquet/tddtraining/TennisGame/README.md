@@ -22,7 +22,7 @@ Ce kata classique vous guide pas à pas dans l'implémentation d'un compteur de 
 
 Si les deux joueurs ont 40, le point suivant est noté : "avantage".  
 Si le même joueur gagne un autre point, il gagne la "partie".  
-Dans le cas contraire, les deux joueurs repartent sur un "deux".
+Dans le cas contraire, les deux joueurs repartent sur un "égalité".
 
 ### Gagner un set
 

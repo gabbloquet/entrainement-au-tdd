@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 public class TennisGameTest {
 
   @Test
+  void should_score_an_empty_game() {
+    TennisGame tennisGame = new TennisGame("");
+    Assertions.assertEquals(tennisGame.score(), "A 0 0 0 0 0 0 B 0 0 0 0 0 0");
+  }
+
+  @Test
   void should_score_a_game_with_a_point() {
     TennisGame tennisGame = new TennisGame("A");
     Assertions.assertEquals(tennisGame.score(), "A 0 0 0 0 0 15 B 0 0 0 0 0 0");
@@ -33,6 +39,15 @@ public class TennisGameTest {
 
     TennisGame tennisGame2 = new TennisGame("A,B,A,B,A,B,B");
     Assertions.assertEquals(tennisGame2.score(), "A 0 0 0 0 0 0 B 0 0 0 0 0 advantage");
+  }
+
+  @Test
+  void should_score_a_deuce_when_users_have_equality_and_more_than_four_points() {
+    TennisGame tennisGame = new TennisGame("A,B,A,B,A,B,A,B");
+    Assertions.assertEquals(tennisGame.score(), "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce");
+
+    TennisGame tennisGameWithMorePoints = new TennisGame("A,B,A,B,A,B,A,B,A,B");
+    Assertions.assertEquals(tennisGameWithMorePoints.score(), "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce");
   }
 
 }

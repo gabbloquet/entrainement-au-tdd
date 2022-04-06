@@ -29,11 +29,19 @@ public class TennisGame {
       return "A 1 0 0 0 0 0 B 0 0 0 0 0 0";
     }
 
+    if(isEquality()) {
+      return "A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce";
+    }
+
     if(bHasAdvantage()) {
       return "A 0 0 0 0 0 0 B 0 0 0 0 0 advantage";
     }
 
     return "A 0 0 0 0 0 advantage B 0 0 0 0 0 0";
+  }
+
+  private boolean isEquality() {
+    return bPoints == aPoints;
   }
 
   private boolean bHasAtLeastTwoPointsMore() {
