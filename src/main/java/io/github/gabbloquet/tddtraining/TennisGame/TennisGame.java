@@ -22,9 +22,9 @@ public class TennisGame {
     for (String point : points) {
       boolean shouldAddASet;
 
-      if(Objects.equals(point, "A")){
+      if("A".equals(point)){
         playerAPoints++;
-      } else if(Objects.equals(point, "B")){
+      } else if("B".equals(point)){
         playerBPoints++;
       }
 
