@@ -18,6 +18,7 @@ Pour vous entrainer, rien de plus simple !
 
 **Facile**
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
+2. [Thermometer](./src/main/java/io/github/gabbloquet/tddtraining/Thermometer/README.md)
 2. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
 3. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
 4. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
