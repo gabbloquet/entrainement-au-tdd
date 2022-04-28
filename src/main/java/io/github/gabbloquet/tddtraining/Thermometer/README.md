@@ -1,10 +1,10 @@
-# Thermomethre
+# Thermomètre
 
 **Niveau :** Facile 
 
 Petit kata facile pour se mettre en jambe.
 
-> Développer un programme permttant de retourner la température la plus proche de 0. 
+> Développer un programme permettant de retourner la température la plus proche de 0. 
 
 ## Règles
 
