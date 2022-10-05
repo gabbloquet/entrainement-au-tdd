@@ -22,4 +22,8 @@ public class FractionCalculator {
                 fraction.denominator() * multiplicator
         );
     }
+
+    public Fraction subtract(Fraction firstFraction, Fraction secondFraction) {
+        return null;
+    }
 }

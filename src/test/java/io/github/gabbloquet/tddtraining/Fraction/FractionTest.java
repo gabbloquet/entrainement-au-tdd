@@ -36,4 +36,15 @@ public class FractionTest {
     assertEquals(expectedResult, result);
   }
 
+  @Test
+  void should_subtract_numerator_if_same_denominator() {
+    Fraction firstFraction = new Fraction(4, 7);
+    Fraction secondFraction = new Fraction(2, 7);
+
+    Fraction result = fractionCalculator.subtract(firstFraction, secondFraction);
+
+    Fraction expectedResult = new Fraction(2, 7);
+    assertEquals(expectedResult, result);
+  }
+
 }
