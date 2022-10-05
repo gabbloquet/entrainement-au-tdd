@@ -25,7 +25,7 @@ public class AdditionCalculatorTest {
 
   @Test
   void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
-    assertEquals("3,3", additionCalculator.calculate("1.1,2.2"));
+    assertEquals("3.3", additionCalculator.calculate("1.1,2.2"));
   }
 
   @Test
