@@ -25,6 +25,7 @@ Pour vous entrainer, rien de plus simple !
 5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
 6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
 7. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
+7. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
 8. 🚧 
 
 **Moyen**
