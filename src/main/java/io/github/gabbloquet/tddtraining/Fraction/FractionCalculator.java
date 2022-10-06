@@ -1,5 +1,7 @@
 package io.github.gabbloquet.tddtraining.Fraction;
 
+import java.util.Objects;
+
 public class FractionCalculator {
 
     public Fraction add(Fraction firstFraction, Fraction secondFraction) {
@@ -42,13 +44,16 @@ public class FractionCalculator {
     }
 
     public int simplify(Fraction fraction) {
-        return fraction.numerator() / fraction.denominator();
+        double simplification = fraction.numerator() / (double) fraction.denominator();
+        if(simplification == (int) simplification)
+            return (int) simplification;
+        throw new NonIntegralSimplification(fraction.toString());
     }
 
-    private Fraction putDenominator(Fraction fraction, int multiplicator) {
+    private Fraction putDenominator(Fraction fraction, int denominator) {
         return new Fraction(
-                fraction.numerator() * multiplicator,
-                fraction.denominator() * multiplicator
+                fraction.numerator() * denominator,
+                fraction.denominator() * denominator
         );
     }
 

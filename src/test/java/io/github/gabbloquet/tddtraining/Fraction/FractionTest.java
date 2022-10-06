@@ -1,5 +1,6 @@
 package io.github.gabbloquet.tddtraining.Fraction;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -81,21 +82,23 @@ public class FractionTest {
   }
 
   @Test
-  void should_simplify_by_2() {
-    Fraction fraction = new Fraction(8, 4);
-
-    int result = fractionCalculator.simplify(fraction);
-
-    assertEquals(2, result);
-  }
-
-  @Test
-  void should_simplify_by_3() {
+  void should_simplify_to_integer() {
     Fraction fraction = new Fraction(9, 3);
 
     int result = fractionCalculator.simplify(fraction);
 
     assertEquals(3, result);
+  }
+
+  @Test
+  void should_throw_impossible_to_simplify_to_integer() {
+    Fraction fraction = new Fraction(10, 3);
+
+    NonIntegralSimplification exception = Assertions.assertThrows(NonIntegralSimplification.class, () -> {
+      fractionCalculator.simplify(fraction);
+    });
+
+    assertEquals("Il n'est pas possible de simplifier la fraction 10/3 vers un nombre entier.", exception.getMessage());
   }
 
 }
