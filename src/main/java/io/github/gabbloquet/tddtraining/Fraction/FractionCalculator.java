@@ -1,7 +1,5 @@
 package io.github.gabbloquet.tddtraining.Fraction;
 
-import java.util.Objects;
-
 public class FractionCalculator {
 
     public Fraction add(Fraction firstFraction, Fraction secondFraction) {
