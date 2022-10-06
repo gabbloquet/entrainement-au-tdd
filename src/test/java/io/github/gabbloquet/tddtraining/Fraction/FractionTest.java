@@ -74,9 +74,28 @@ public class FractionTest {
     Fraction firstFraction = new Fraction(4, 7);
     Fraction secondFraction = new Fraction(2, 7);
 
-    int result = fractionCalculator.divide(firstFraction, secondFraction);
+    Fraction result = fractionCalculator.divide(firstFraction, secondFraction);
+
+    Fraction expectedResult = new Fraction(28, 14);
+    assertEquals(expectedResult, result);
+  }
+
+  @Test
+  void should_simplify_by_2() {
+    Fraction fraction = new Fraction(8, 4);
+
+    int result = fractionCalculator.simplify(fraction);
 
     assertEquals(2, result);
+  }
+
+  @Test
+  void should_simplify_by_3() {
+    Fraction fraction = new Fraction(9, 3);
+
+    int result = fractionCalculator.simplify(fraction);
+
+    assertEquals(3, result);
   }
 
 }

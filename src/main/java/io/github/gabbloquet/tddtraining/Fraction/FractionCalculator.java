@@ -9,22 +9,23 @@ public class FractionCalculator {
             return new Fraction(numerator, firstFraction.denominator());
         }
 
-        int multiplicator = firstFraction.denominator();
-        firstFraction = multiplicate(firstFraction, secondFraction.denominator());
-        secondFraction = multiplicate(secondFraction, multiplicator);
+        int denominator = firstFraction.denominator();
+        firstFraction = putDenominator(firstFraction, secondFraction.denominator());
+        secondFraction = putDenominator(secondFraction, denominator);
 
         return add(firstFraction, secondFraction);
     }
 
     public Fraction subtract(Fraction firstFraction, Fraction secondFraction) {
+
         if(hasSameDenominateur(firstFraction, secondFraction)){
             int numerator = firstFraction.numerator() - secondFraction.numerator();
             return new Fraction(numerator, firstFraction.denominator());
         }
 
         int multiplicator = firstFraction.denominator();
-        firstFraction = multiplicate(firstFraction, secondFraction.denominator());
-        secondFraction = multiplicate(secondFraction, multiplicator);
+        firstFraction = putDenominator(firstFraction, secondFraction.denominator());
+        secondFraction = putDenominator(secondFraction, multiplicator);
 
         return subtract(firstFraction, secondFraction);
     }
@@ -35,11 +36,16 @@ public class FractionCalculator {
         return new Fraction( numerateur, denominateur);
     }
 
-    public int divide(Fraction firstFraction, Fraction secondFraction) {
-        return firstFraction.numerator() / secondFraction.numerator();
+    public Fraction divide(Fraction firstFraction, Fraction secondFraction) {
+        Fraction secondFractionOpposite = new Fraction(secondFraction.denominator(), secondFraction.numerator());
+        return multiply(firstFraction, secondFractionOpposite);
     }
 
-    private Fraction multiplicate(Fraction fraction, int multiplicator) {
+    public int simplify(Fraction fraction) {
+        return fraction.numerator() / fraction.denominator();
+    }
+
+    private Fraction putDenominator(Fraction fraction, int multiplicator) {
         return new Fraction(
                 fraction.numerator() * multiplicator,
                 fraction.denominator() * multiplicator
