@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MultiplicationCalculatorTest {
+class MultiplicationCalculatorTest {
 
   private final StringCalculator multiplicationCalculator = new MultiplicationCalculator();
 
@@ -24,8 +24,8 @@ public class MultiplicationCalculatorTest {
   }
 
   @Test
-  void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
-    assertEquals("2.42", multiplicationCalculator.calculate("1.1,2.2"));
+  void should_return_2_comma_42_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+    assertEquals("2,42", multiplicationCalculator.calculate("1.1,2.2"));
   }
 
   @Test

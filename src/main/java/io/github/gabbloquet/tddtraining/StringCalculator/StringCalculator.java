@@ -117,7 +117,7 @@ public abstract class StringCalculator {
     Matcher matcher = pattern.matcher(operation);
 
     while (matcher.find()) {
-      if(negatives.length() == 0){
+      if(negatives.isEmpty()){
         negatives.append("-").append(matcher.group(1));
       } else {
         negatives.append(", -").append(matcher.group(1));
