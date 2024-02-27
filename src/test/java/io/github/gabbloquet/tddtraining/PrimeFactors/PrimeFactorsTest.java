@@ -7,7 +7,7 @@ import java.util.List;
 import static io.github.gabbloquet.tddtraining.PrimeFactors.PrimeFactors.factorsOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PrimeFactorsTest {
+class PrimeFactorsTest {
 
   @Test
   void should_return_an_empty_array_if_is_0_or_1() {

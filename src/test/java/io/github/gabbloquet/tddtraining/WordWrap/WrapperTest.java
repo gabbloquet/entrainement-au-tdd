@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.WordWrap;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class WrapperTest {
+class WrapperTest {
 
   private final Wrapper wrapper = new Wrapper();
 

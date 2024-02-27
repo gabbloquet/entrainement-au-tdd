@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.Thermometer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ThermometerTest {
+class ThermometerTest {
 
   @Test
   void should_return_0_if_empty() {

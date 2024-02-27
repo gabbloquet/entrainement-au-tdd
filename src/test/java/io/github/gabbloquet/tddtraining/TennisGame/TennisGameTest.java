@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.TennisGame;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class TennisGameTest {
+class TennisGameTest {
 
   @Test
   void should_initialize_a_game() {

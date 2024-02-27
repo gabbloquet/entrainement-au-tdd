@@ -6,7 +6,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DictionaryReplacerTest {
+class DictionaryReplacerTest {
 
   private final DictionaryReplacer dictionaryReplacer = new DictionaryReplacer();
 

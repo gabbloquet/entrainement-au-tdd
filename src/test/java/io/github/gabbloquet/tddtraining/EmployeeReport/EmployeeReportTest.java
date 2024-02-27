@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EmployeeReportTest {
+class EmployeeReportTest {
 
   private final EmployeeReport employeeReport = new EmployeeReport();
 
