@@ -23,16 +23,16 @@ public class Wardrobe {
   public List<List<Integer>> compliantCombinations() {
     List<List<Integer>> compliantCombinations = new ArrayList<>();
     for(int i = 0; i < availableIndividualSizes.size(); i++) {
-      for(int j = 0; j < availableIndividualSizes.size(); j++) {
-        List<Integer> initialCombination = new ArrayList<>();
-        initialCombination.add(availableIndividualSizes.get(i));
-        while(combinaisonSize(initialCombination) < size) {
-          List<List<Integer>> compliantCombinationsWithInit =
-            findCombinations(initialCombination, availableIndividualSizes.get(j));
-          compliantCombinations.addAll(compliantCombinationsWithInit);
-          initialCombination.add(availableIndividualSizes.get(i));
+        for (Integer availableIndividualSize : availableIndividualSizes) {
+            List<Integer> initialCombination = new ArrayList<>();
+            initialCombination.add(availableIndividualSizes.get(i));
+            while (combinaisonSize(initialCombination) < size) {
+                List<List<Integer>> compliantCombinationsWithInit =
+                    findCombinations(initialCombination, availableIndividualSize);
+                compliantCombinations.addAll(compliantCombinationsWithInit);
+                initialCombination.add(availableIndividualSizes.get(i));
+            }
         }
-      }
     }
     return compliantCombinations;
   }
@@ -59,17 +59,17 @@ public class Wardrobe {
 
   public int getPrice(List<Integer> closetSizes) {
     return closetSizes.stream()
-      .reduce(0, (total, closetSize) -> total += prices.get(closetSize));
+      .reduce(0, (total, closetSize) -> total + prices.get(closetSize));
   }
 
   public List<List<Integer>> getLeastExpensiveCombinations() {
     List<List<Integer>> combinations = new ArrayList<>();
     compliantCombinations()
       .forEach(combinaison -> {
-        if(combinations.isEmpty() || getPrice(combinaison) < getPrice(combinations.get(0))){
+        if(combinations.isEmpty() || getPrice(combinaison) < getPrice(combinations.getFirst())){
           combinations.clear();
           combinations.add(combinaison);
-        } else if(getPrice(combinaison) == getPrice(combinations.get(0))) {
+        } else if(getPrice(combinaison) == getPrice(combinations.getFirst())) {
           combinations.add(combinaison);
         }
       });

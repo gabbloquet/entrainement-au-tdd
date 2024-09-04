@@ -35,7 +35,8 @@ Pour vous entrainer, rien de plus simple !
 4. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
 5. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
 6. [TennisScore](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
-7. 🚧 
+7. [Potter](./src/main/java/io/github/gabbloquet/tddtraining/Potter/README.md)
+8. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
@@ -116,7 +117,7 @@ Celui-ci vous permettra de retrouver facilement où vous en étiez.
 
 #### Le papier
 
-Personnellement j'aime le support papier et m'en sers quotidiennement. Pour ce qui est de la réalisation des katas je ne peux que conseiller de s'en servir. Cela peut parfois s'avérer très utile pour garder en tête les règles clés, dessiner des choses (Cf. Kata Christmas Light), noter pour se souvenir / ne pas oublier...
+Personnellement, j'aime le support papier et m'en sers quotidiennement. Pour ce qui est de la réalisation des katas je ne peux que conseiller de s'en servir. Cela peut parfois s'avérer très utile pour garder en tête les règles clés, dessiner des choses (Cf. Kata Christmas Light), noter pour se souvenir / ne pas oublier...
 
 ### Quelques ressources
 

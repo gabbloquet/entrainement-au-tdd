@@ -43,7 +43,7 @@ public class RomanNumerals {
   public int toArabic(String romanNumber) {
     int arabicNumber = 0;
 
-    while (romanNumber.length() > 0) {
+    while (!romanNumber.isEmpty()) {
       for (Combinaison conversion : conversions) {
         if(romanNumber.startsWith(conversion.romanValue())) {
           arabicNumber += conversion.arabicValue();

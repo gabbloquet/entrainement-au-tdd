@@ -2,7 +2,7 @@
 
 **Niveau :** Facile
 
-## Configuez votre garde-robe
+## Configurez votre garde-robe
 
 Imaginez que vous venez emménager dans votre nouvel appartement, et que vous vous rendez compte que vous avez encore besoin d'une nouvelle armoire pour votre dressing.  
 Malheureusement, vous ne trouverez pas d'armoire qui s'adapte exactement à la taille de votre mur. Mais votre vendeur de meubles fabriqués en France préféré vous offre la possibilité de construire votre propre armoire personnalisée en combinant des éléments d'armoire individuels.
