@@ -29,6 +29,7 @@ Pour vous entrainer, rien de plus simple !
 8. 🚧 
 
 **Moyen**
+1. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
 2. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
 3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
