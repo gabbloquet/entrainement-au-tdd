@@ -26,10 +26,11 @@ Pour vous entrainer, rien de plus simple !
 6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
 7. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
 7. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
-8. 🚧 
+8. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
+9. 🚧 
 
 **Moyen**
-1. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
+1. [Diseur](./src/main/java/io/github/gabbloquet/tddtraining/Diseur/README.md)
 1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
 2. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
 3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
