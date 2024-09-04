@@ -51,7 +51,7 @@ Elle est vivement recommandée par les artisans développeurs (software crafters
 Elle est certainement la méthode de design de code la plus efficace connue actuellement !  
 Cependant, malgré son incroyable efficience, elle est souvent mal comprise.
 
-![Red green refactor](https://www.thinktocode.com/wp-content/uploads/2018/02/red-green-refactor.png)
+![Red green refactor](docs/red_green_refactor.png)
 
 1️⃣ On commence par RED. Dans cette phase, on va écrire un test qui ne passe pas (s’il ne compile pas, il ne passe pas). À ce moment, on ne se concentre que sur l'intention que l'on veut donner à cette méthode, la logique métier.
 
@@ -131,5 +131,3 @@ Personnellement, j'aime le support papier et m'en sers quotidiennement. Pour ce 
 ### Note
 
 De plus, le TDD permet de ne pas se retrouver dans cette situation :
-
-![doc-bugs-apres-le-developpement](https://media-exp1.licdn.com/dms/image/C4E22AQHenATWnzpdyA/feedshare-shrink_1280/0/1641973776197?e=1645056000&v=beta&t=ITrF_7pXtUINc-5rRIrBLfC7aQ0l2LBCo5kFICmNtbI)
