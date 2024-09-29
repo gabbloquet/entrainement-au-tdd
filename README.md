@@ -14,7 +14,7 @@ Pour vous entrainer, rien de plus simple !
 ## Exercices proposés
 
 **Découvrir**
-1. [Stack](./src/main/java/io/github/gabbloquet/tddtraining/Stack/README.md)
+1. [Stack](./src/main/java/io/github/gabbloquet/tddtraining/stack/README.md)
 
 **Facile**
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
