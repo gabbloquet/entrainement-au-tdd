@@ -56,7 +56,7 @@ Cependant, malgré son incroyable efficience, elle est souvent mal comprise.
 
 1️⃣ On commence par RED. Dans cette phase, on va écrire un test qui ne passe pas (s’il ne compile pas, il ne passe pas). À ce moment, on ne se concentre que sur l'intention que l'on veut donner à cette méthode, la logique métier.
 
-2️⃣ Vient ensuite la phase GREEN, ici on va écrire le code le simple possible pour faire passer notre test (sans casser un test précédent).
+2️⃣ Vient ensuite la phase GREEN, ici on va écrire le code le plus simple possible pour faire passer notre test (sans casser un test précédent).
 
 3️⃣ On termine le cycle avec le REFACTORING, où on va retravailler notre code pour :
 
