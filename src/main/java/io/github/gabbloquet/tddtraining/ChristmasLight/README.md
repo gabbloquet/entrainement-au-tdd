@@ -54,7 +54,9 @@ Lorsque j'allume le rendu est celui-ci, lorsque j'éteins celui-là...
 
 ### Solution
 
-Si vous souhaitez voir mes résultats, il vous suffit d'executer [la classe Solution](./Solution.java).
+Sur les instructions du Père Noël ci-dessus, je trouve **230022 lumières allumées** pour la première partie et **539560 de luminosité totale** pour la seconde.
+
+Sur `master`, la classe de test `SantaInstructionsTest` vérifie ces deux résultats : de quoi comparer avec les vôtres.
 
 
 Have fun :D 
