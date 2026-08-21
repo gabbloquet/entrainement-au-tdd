@@ -4,7 +4,9 @@ import org.springframework.expression.Operation;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 import java.util.function.BinaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -128,7 +130,7 @@ public abstract class StringCalculator {
   }
 
   String toString(float result) {
-    DecimalFormat deciFormat = new DecimalFormat();
+    DecimalFormat deciFormat = new DecimalFormat("#,##0.###", DecimalFormatSymbols.getInstance(Locale.FRENCH));
     deciFormat.setRoundingMode(RoundingMode.HALF_EVEN);
     return deciFormat.format(result);
   }
