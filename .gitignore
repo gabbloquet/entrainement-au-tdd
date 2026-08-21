@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### AI ###
+
+.claude
+.mcp.json
+CLAUDE.md
