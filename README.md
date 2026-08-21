@@ -7,11 +7,26 @@ Ce repository a pour but de s'exercer au test driven development à travers des 
 
 ## Comment ?
 
-Pour vous entrainer, rien de plus simple !  
-1. Cliquez sur le lien ci-dessous de l'exercice que vous souhaiter faire.
-2. Si vous avez cloné ce repo supprimez la classe et celle de test associée
-3. Suivez les instructions ;) (En commençant par développer un test bien entendu :D)
-4. Have Fun !
+Pour vous entrainer, rien de plus simple !
+
+Tout se passe sur la branche [`exercices`](https://github.com/gabbloquet/entrainement-au-tdd/tree/exercices) : les énoncés y sont tous, mais les classes et les tests se sont volatilisés 🪄  
+Plus rien à supprimer à la main, la page est blanche — et c'est exactement ce qu'il faut pour démarrer un kata.
+
+```bash
+git clone git@github.com:gabbloquet/entrainement-au-tdd.git
+cd entrainement-au-tdd
+git switch exercices
+```
+
+1. Cliquez sur le lien ci-dessous de l'exercice que vous souhaitez faire.
+2. Suivez les instructions ;) (En commençant par développer un test bien entendu :D)
+3. Have Fun !
+
+Et le jour où vous voulez comparer votre design avec le mien, mes solutions sont restées sur `master` :
+
+```bash
+git diff exercices master -- src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz
+```
 
 ## Exercices proposés
 
