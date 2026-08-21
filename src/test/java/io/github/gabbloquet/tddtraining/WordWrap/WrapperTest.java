@@ -1,8 +1,13 @@
 package io.github.gabbloquet.tddtraining.WordWrap;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class WrapperTest {
 
@@ -35,21 +40,23 @@ class WrapperTest {
     assertWrap("xx xx", "xx xx", 5);
   }
 
-  @Test
-  void should_fill_the_line_with_the_beginning_of_a_word_longer_than_a_line() {
-    assertWrap("a long\nword", "a longword", 6);
+  @ParameterizedTest
+  @MethodSource
+  void should_wrap_the_examples_of_the_readme(String stringToWrap, int column, String expected) {
+    assertWrap(expected, stringToWrap, column);
   }
 
-  @Test
-  void should_not_break_before_a_long_word_when_the_line_is_already_full() {
-    assertWrap("greedy\nwhenth\newordi\nstoolo\nng", "greedy whenthewordistoolong", 6);
-    assertWrap("greedy\nwhenthe\nwordist\noolong", "greedy whenthewordistoolong", 7);
-  }
-
-  @Test
-  void should_wrap_a_whole_sentence_on_word_boundaries() {
-    assertWrap("a lot of\nwords for\na single\nline", "a lot of words for a single line", 10);
-    assertWrap("this\nis a\ntest", "this is a test", 4);
+  static Stream<Arguments> should_wrap_the_examples_of_the_readme() {
+    return Stream.of(
+      arguments("test", 7, "test"),
+      arguments("hello world", 7, "hello\nworld"),
+      arguments("a lot of words for a single line", 10, "a lot of\nwords for\na single\nline"),
+      arguments("this is a test", 4, "this\nis a\ntest"),
+      arguments("a longword", 6, "a long\nword"),
+      arguments("areallylongword", 6, "areall\nylongw\nord"),
+      arguments("greedy whenthewordistoolong", 6, "greedy\nwhenth\newordi\nstoolo\nng"),
+      arguments("greedy whenthewordistoolong", 7, "greedy\nwhenthe\nwordist\noolong")
+    );
   }
 
   @Test
