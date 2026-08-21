@@ -18,6 +18,7 @@ Créez une fonction `add` qui prend une chaîne et renvoie une chaîne :
  - La méthode peut prendre 0, 1 ou 2 nombres séparés par une virgule, et renvoie leur somme.
  - Une chaîne vide renverra "0".
  - Exemple d'entrées : "", "1", "1.1,2.2". 
+ - Le résultat est écrit à la française — virgule décimale — et **arrondi à 3 décimales au maximum** : `"1.23456"` renvoie `"1,235"`, `"0.0001"` renvoie `"0"`.
 
 ### Plusieurs nombres
 
