@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class FizzBuzzTest {
@@ -12,9 +13,9 @@ class FizzBuzzTest {
     private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 4})
-    void should_return_the_number_when_it_is_multiple_of_neither_3_nor_5(int number) {
-        assertThat(fizzBuzz.convert(number)).isEqualTo(String.valueOf(number));
+    @CsvSource({"1, 1", "2, 2", "4, 4"})
+    void should_return_the_number_when_it_is_multiple_of_neither_3_nor_5(int number, String expected) {
+        assertThat(fizzBuzz.convert(number)).isEqualTo(expected);
     }
 
     @ParameterizedTest
