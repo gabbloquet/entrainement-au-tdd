@@ -36,6 +36,11 @@ class FizzBuzzTest {
     }
 
     @Test
+    void should_compute_1_the_smallest_accepted_number() {
+        assertThat(fizzBuzz.compute(1)).isEqualTo("1");
+    }
+
+    @Test
     void should_concatenate_every_conversion_up_to_20() {
         assertThat(fizzBuzz.compute(20))
             .isEqualTo("12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19Buzz");
