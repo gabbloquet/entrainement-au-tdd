@@ -5,13 +5,31 @@ public class Wrapper {
     if (hasNotToBeWrapped(string, columnSize))
       return string;
 
-    int spaceIndex = string.lastIndexOf(" ", columnSize);
-    if (thereIsNoSpace(spaceIndex))
-      spaceIndex = columnSize;
+    int breakIndex = breakIndex(string, columnSize);
 
-    return string.substring(0, spaceIndex).trim()
+    return string.substring(0, breakIndex).trim()
       + "\n"
-      + wrap(string.substring(spaceIndex).trim(), columnSize);
+      + wrap(string.substring(breakIndex).trim(), columnSize);
+  }
+
+  private int breakIndex(String string, int columnSize) {
+    int spaceIndex = string.lastIndexOf(" ", columnSize);
+
+    if (thereIsNoSpace(spaceIndex) || nextWordNeedsAWholeLine(string, spaceIndex, columnSize))
+      return columnSize;
+
+    return spaceIndex;
+  }
+
+  private boolean nextWordNeedsAWholeLine(String string, int spaceIndex, int columnSize) {
+    return lengthOfWordAfter(string, spaceIndex) > columnSize;
+  }
+
+  private int lengthOfWordAfter(String string, int spaceIndex) {
+    String remaining = string.substring(spaceIndex).trim();
+    int endOfWord = remaining.indexOf(" ");
+
+    return endOfWord == -1 ? remaining.length() : endOfWord;
   }
 
   private boolean hasNotToBeWrapped(String string, int columnSize) {
