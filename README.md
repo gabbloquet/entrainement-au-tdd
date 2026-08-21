@@ -145,7 +145,3 @@ Personnellement, j'aime le support papier et m'en sers quotidiennement. Pour ce 
  - [Apprendre le TDD par IPPON](https://blog.ippon.fr/2020/02/12/apprendre-le-tdd/)
  - [Vidéo : Comment faire du TDD](https://www.youtube.com/watch?v=wbZ6jWmRY14)
  - [Video : TDD par l'exemple](https://www.youtube.com/watch?v=nbSaq_ykOl4)
-
-### Note
-
-De plus, le TDD permet de ne pas se retrouver dans cette situation :
