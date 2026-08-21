@@ -1,5 +1,7 @@
 package io.github.gabbloquet.tddtraining.TennisGame;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +11,14 @@ class TennisGameTest {
   void should_initialize_a_game() {
     TennisGame tennisGame = new TennisGame("");
     Assertions.assertEquals("A 0 0 0 0 0 0 B 0 0 0 0 0 0", tennisGame.getScore());
+  }
+
+  @Test
+  void should_score_the_same_match_twice() {
+    TennisGame tennisGame = new TennisGame("A,A,A,A");
+
+    assertThat(tennisGame.getScore()).isEqualTo("A 1 0 0 0 0 0 B 0 0 0 0 0 0");
+    assertThat(tennisGame.getScore()).isEqualTo("A 1 0 0 0 0 0 B 0 0 0 0 0 0");
   }
 
   @Test
