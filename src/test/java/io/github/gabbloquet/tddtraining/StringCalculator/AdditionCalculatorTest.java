@@ -10,37 +10,37 @@ class AdditionCalculatorTest {
   private final StringCalculator additionCalculator = new AdditionCalculator();
 
   @Test
-  void should_return_0_by_default() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_0_by_default() throws Exception {
     assertThat(additionCalculator.calculate("")).isEqualTo("0");
   }
 
   @Test
-  void should_return_1_if_operation_is_1() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_1_if_operation_is_1() throws Exception {
     assertThat(additionCalculator.calculate("1")).isEqualTo("1");
   }
 
   @Test
-  void should_return_2_if_operation_is_1_comma_1() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_2_if_operation_is_1_comma_1() throws Exception {
     assertThat(additionCalculator.calculate("1,1")).isEqualTo("2");
   }
 
   @Test
-  void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws Exception {
     assertThat(additionCalculator.calculate("1.1,2.2")).isEqualTo("3,3");
   }
 
   @Test
-  void should_return_6_if_operation_is_1_comma_2_comma_3() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_6_if_operation_is_1_comma_2_comma_3() throws Exception {
     assertThat(additionCalculator.calculate("1,2,3")).isEqualTo("6");
   }
 
   @Test
-  void should_return_16_if_operation_is_1_comma_2_comma_3_comma_10() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_16_if_operation_is_1_comma_2_comma_3_comma_10() throws Exception {
     assertThat(additionCalculator.calculate("1,2,3,10")).isEqualTo("16");
   }
 
   @Test
-  void should_return_6_if_operation_is_1_newline_2_comma_3() throws UnexpectedNewlineException, NotANumberException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_6_if_operation_is_1_newline_2_comma_3() throws Exception {
     assertThat(additionCalculator.calculate("1\n2,3")).isEqualTo("6");
   }
 
@@ -80,17 +80,17 @@ class AdditionCalculatorTest {
   }
 
   @Test
-  void should_return_3_with_semicolon_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_3_with_semicolon_as_delimiter() throws Exception {
     assertThat(additionCalculator.calculate("//;\n1;2")).isEqualTo("3");
   }
 
   @Test
-  void should_return_6_with_pipe_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_6_with_pipe_as_delimiter() throws Exception {
     assertThat(additionCalculator.calculate("//|\n1|2|3")).isEqualTo("6");
   }
 
   @Test
-  void should_return_5_with_text_as_delimiter() throws NotANumberException, UnexpectedNewlineException, UnexpectedCommaException, NegativeNotAllowedException , NotCompliantOperationException {
+  void should_return_5_with_text_as_delimiter() throws Exception {
     assertThat(additionCalculator.calculate("//sep\n2sep3")).isEqualTo("5");
   }
 
