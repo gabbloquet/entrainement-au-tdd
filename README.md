@@ -36,26 +36,26 @@ git diff exercices master -- src/main/java/io/github/gabbloquet/tddtraining/Fizz
 **Facile**
 1. [FizzBuzz](./src/main/java/io/github/gabbloquet/tddtraining/FizzBuzz/README.md)
 2. [Thermometer](./src/main/java/io/github/gabbloquet/tddtraining/Thermometer/README.md)
-2. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
-3. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
-4. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
-5. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
-6. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
-7. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
-7. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
-8. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
-9. 🚧 
+3. [PrimeFactors](./src/main/java/io/github/gabbloquet/tddtraining/PrimeFactors/README.md)
+4. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
+5. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
+6. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
+7. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
+8. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
+9. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
+10. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
+11. 🚧 
 
 **Moyen**
 1. [Diseur](./src/main/java/io/github/gabbloquet/tddtraining/Diseur/README.md)
-1. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
-2. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
-3. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
-4. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
-5. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
-6. [TennisScore](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
-7. [Potter](./src/main/java/io/github/gabbloquet/tddtraining/Potter/README.md)
-8. 🚧 
+2. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
+3. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
+4. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
+5. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
+6. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
+7. [Tennis Game](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
+8. [Potter](./src/main/java/io/github/gabbloquet/tddtraining/Potter/README.md)
+9. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
@@ -145,7 +145,3 @@ Personnellement, j'aime le support papier et m'en sers quotidiennement. Pour ce 
  - [Apprendre le TDD par IPPON](https://blog.ippon.fr/2020/02/12/apprendre-le-tdd/)
  - [Vidéo : Comment faire du TDD](https://www.youtube.com/watch?v=wbZ6jWmRY14)
  - [Video : TDD par l'exemple](https://www.youtube.com/watch?v=nbSaq_ykOl4)
-
-### Note
-
-De plus, le TDD permet de ne pas se retrouver dans cette situation :

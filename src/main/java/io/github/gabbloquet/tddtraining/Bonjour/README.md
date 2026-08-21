@@ -13,5 +13,6 @@ Pour cela, nous te proposons d'implémenter ces règles:
 - Règle 4 : Répondre Bonjour si le script est lancé de 6h00 à 17h59
 - Règle 5 : Répondre Bonsoir si le script est lancé de 18h00 à 22h59
 - Règle 6 : Répondre Bonne nuit si le script est lancé de 23h00 à 5h59
+- Règle 7 : Refuser de saluer si le prénom est absent, vide ou ne contient que des espaces
 
 Bon courage !
