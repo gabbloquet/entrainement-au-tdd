@@ -40,26 +40,26 @@ git diff exercices master -- src/main/java/io/github/gabbloquet/tddtraining/Fizz
 4. [LeapYears](./src/main/java/io/github/gabbloquet/tddtraining/LeapYears/README.md)
 5. [DictionaryReplacer](./src/main/java/io/github/gabbloquet/tddtraining/DictionaryReplacer/README.md)
 6. [EmployeeReport](./src/main/java/io/github/gabbloquet/tddtraining/EmployeeReport/README.md)
-7. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
-8. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
-9. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
-10. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
-11. 🚧 
+7. [Fraction](./src/main/java/io/github/gabbloquet/tddtraining/Fraction/README.md)
+8. 🚧 
 
 **Moyen**
-1. [Diseur](./src/main/java/io/github/gabbloquet/tddtraining/Diseur/README.md)
-2. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
-3. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
-4. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
-5. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
-6. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
-7. [Tennis Game](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
-8. [Potter](./src/main/java/io/github/gabbloquet/tddtraining/Potter/README.md)
-9. 🚧 
+1. [Bonjour](./src/main/java/io/github/gabbloquet/tddtraining/Bonjour/README.md)
+2. [Wardrobe](./src/main/java/io/github/gabbloquet/tddtraining/Wardrobe/README.md)
+3. [ChristmasLight](./src/main/java/io/github/gabbloquet/tddtraining/ChristmasLight/README.md)
+4. [Diseur](./src/main/java/io/github/gabbloquet/tddtraining/Diseur/README.md)
+5. [BowlingGame](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGame/README.md)
+6. [Diamond](./src/main/java/io/github/gabbloquet/tddtraining/Diamond/README.md)
+7. [RomanNumerals](./src/main/java/io/github/gabbloquet/tddtraining/RomanNumerals/README.md)
+8. [WordWrap](./src/main/java/io/github/gabbloquet/tddtraining/WordWrap/README.md)
+9. [Potter](./src/main/java/io/github/gabbloquet/tddtraining/Potter/README.md)
+10. 🚧 
 
 **Difficile**
 1. [BowlingGameHardcore](./src/main/java/io/github/gabbloquet/tddtraining/BowlingGameHardcore/README.md)
-2. 🚧 
+2. [StringCalculator](./src/main/java/io/github/gabbloquet/tddtraining/StringCalculator/README.md)
+3. [Tennis Game](./src/main/java/io/github/gabbloquet/tddtraining/TennisGame/README.md)
+4. 🚧 
 
 ## Qu'est-ce que le Test driven Development ?
 

@@ -1,7 +1,6 @@
 # Tennis Game
 
-**Niveau :** Moyen 
-
+**Niveau :** Difficile
 Ce kata classique vous guide pas à pas dans l'implémentation d'un compteur de point de tennis.
 
 ## Règles

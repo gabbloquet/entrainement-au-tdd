@@ -1,7 +1,6 @@
 # ChristmasLight
 
-**Niveau :** Facile
-
+**Niveau :** Moyen
 ## Probablement un risque d'incendie
 
 Parce que vos voisins ne cessent de vous battre au concours de décoration des maisons de Noël, vous avez décidé de déployer un million de lumières dans une grille de 1000x1000.   
