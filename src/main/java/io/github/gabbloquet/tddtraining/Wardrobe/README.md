@@ -1,7 +1,8 @@
-# Wardrobe
+# Wardrobe / Garde-robe
 
 **Niveau :** Moyen
-## Configurez votre garde-robe
+
+## Énoncé
 
 Imaginez que vous venez emménager dans votre nouvel appartement, et que vous vous rendez compte que vous avez encore besoin d'une nouvelle armoire pour votre dressing.  
 Malheureusement, vous ne trouverez pas d'armoire qui s'adapte exactement à la taille de votre mur. Mais votre vendeur de meubles fabriqués en France préféré vous offre la possibilité de construire votre propre armoire personnalisée en combinant des éléments d'armoire individuels.
@@ -18,7 +19,7 @@ _Avec quelles combinaisons d'éléments d'armoire pouvez-vous tirer le meilleur 
 
 > Écrivez une fonction qui renvoie toutes les combinaisons d'éléments d'armoire qui remplissent exactement le mur.
 
-## Tâche supplémentaire
+## Pour aller plus loin
 
 Voici la liste des prix associés aux éléments d'armoire disponibles :
 

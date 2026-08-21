@@ -1,8 +1,8 @@
-# WordWrap
+# Word Wrap / Retour à la ligne
 
 **Niveau :** Moyen
 
-## Description
+## Énoncé
 
 Vous écrivez une classe appelée `Wrapper`, qui possède une seule fonction statique nommée `wrap` qui prend deux arguments : 
  - une chaîne de caractères 
@@ -19,7 +19,7 @@ Comme dans un traitement de texte, vous coupez la ligne en remplaçant le dernie
  - Si un mot est plus long qu'une ligne, séparez-le en l'ajoutant autant que possible à la ligne précédente, puis séparez-le à nouveau s'il ne tient toujours pas sur la ligne actuelle, etc.
  - Les lignes ne doivent pas contenir d'espaces en tête ou en queue de ligne.
 
-## Exemple
+## Exemples
 
 ```
  ("test", 7)            -> "test"

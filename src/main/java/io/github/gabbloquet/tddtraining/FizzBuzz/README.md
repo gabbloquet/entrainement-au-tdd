@@ -2,6 +2,8 @@
 
 **Niveau :** Facile
 
+## Énoncé
+
 Vous devez construire une fonction fizzBuzz qui transforme un entier en chaîne de caractères selon les règles suivantes.
 
 ## Règles
@@ -11,7 +13,7 @@ Vous devez construire une fonction fizzBuzz qui transforme un entier en chaîne 
  
 > Dans tous les autres cas, on retourne le nombre sous forme de chaîne de caractères.
 
-## Examples
+## Exemples
 ```
 1 => 1
 2 => 2
@@ -22,7 +24,7 @@ Vous devez construire une fonction fizzBuzz qui transforme un entier en chaîne 
 15 => FizzBuzz
 ```
 
-## Étape 2
+## Pour aller plus loin
 Construire une fonction compute qui affiche la suite de correspondance de 1 à 100.
 
 Attendu : `12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz`

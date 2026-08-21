@@ -1,6 +1,8 @@
-# Thermomètre
+# Thermometer / Thermomètre
 
-**Niveau :** Facile 
+**Niveau :** Facile
+
+## Énoncé
 
 Petit kata facile pour se mettre en jambe.
 

@@ -1,8 +1,8 @@
-# Diseur de chaine
+# Diseur de chaîne / Look and Say
 
 **Niveau :** Moyen
 
-## Ennoncé
+## Énoncé
 
 L'objectif de cet exercice est de compter le nombre de chiffre dans la chaine.  
 
@@ -10,6 +10,8 @@ L'objectif de cet exercice est de compter le nombre de chiffre dans la chaine.
 
 Astuce : pour comprendre la logique, prononce la chaine à haute voix !
 D’où le nom du kata... 😄
+
+## Exemples
 
 En effet: 
  - dans "1", il y a 1 "1", donc on attend en retour "11"
