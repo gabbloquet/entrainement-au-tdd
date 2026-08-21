@@ -2,7 +2,8 @@ package io.github.gabbloquet.tddtraining.RomanNumerals;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ToRomanTest {
 
@@ -10,71 +11,68 @@ class ToRomanTest {
 
   @Test
   void should_convert_to_I() throws UnconvertibleException {
-    assertEquals("I", romanNumerals.toRoman(1));
-    assertEquals("II", romanNumerals.toRoman(2));
-    assertEquals("III", romanNumerals.toRoman(3));
+    assertThat(romanNumerals.toRoman(1)).isEqualTo("I");
+    assertThat(romanNumerals.toRoman(2)).isEqualTo("II");
+    assertThat(romanNumerals.toRoman(3)).isEqualTo("III");
   }
 
   @Test
   void should_convert_to_V() throws UnconvertibleException {
-    assertEquals("IV", romanNumerals.toRoman(4));
-    assertEquals("V", romanNumerals.toRoman(5));
-    assertEquals("VII", romanNumerals.toRoman(7));
+    assertThat(romanNumerals.toRoman(4)).isEqualTo("IV");
+    assertThat(romanNumerals.toRoman(5)).isEqualTo("V");
+    assertThat(romanNumerals.toRoman(7)).isEqualTo("VII");
   }
 
   @Test
   void should_convert_to_X() throws UnconvertibleException {
-    assertEquals("IX", romanNumerals.toRoman(9));
-    assertEquals("X", romanNumerals.toRoman(10));
-    assertEquals("XII", romanNumerals.toRoman(12));
-    assertEquals("XVII", romanNumerals.toRoman(17));
-    assertEquals("XXX", romanNumerals.toRoman(30));
+    assertThat(romanNumerals.toRoman(9)).isEqualTo("IX");
+    assertThat(romanNumerals.toRoman(10)).isEqualTo("X");
+    assertThat(romanNumerals.toRoman(12)).isEqualTo("XII");
+    assertThat(romanNumerals.toRoman(17)).isEqualTo("XVII");
+    assertThat(romanNumerals.toRoman(30)).isEqualTo("XXX");
   }
 
   @Test
   void should_convert_to_L() throws UnconvertibleException {
-    assertEquals("XL", romanNumerals.toRoman(40));
-    assertEquals("L", romanNumerals.toRoman(50));
-    assertEquals("LXI", romanNumerals.toRoman(61));
-    assertEquals("LXXX", romanNumerals.toRoman(80));
+    assertThat(romanNumerals.toRoman(40)).isEqualTo("XL");
+    assertThat(romanNumerals.toRoman(50)).isEqualTo("L");
+    assertThat(romanNumerals.toRoman(61)).isEqualTo("LXI");
+    assertThat(romanNumerals.toRoman(80)).isEqualTo("LXXX");
   }
 
   @Test
   void should_convert_to_C() throws UnconvertibleException {
-    assertEquals("XC", romanNumerals.toRoman(90));
-    assertEquals("C", romanNumerals.toRoman(100));
-    assertEquals("CC", romanNumerals.toRoman(200));
+    assertThat(romanNumerals.toRoman(90)).isEqualTo("XC");
+    assertThat(romanNumerals.toRoman(100)).isEqualTo("C");
+    assertThat(romanNumerals.toRoman(200)).isEqualTo("CC");
   }
 
   @Test
   void should_convert_to_D() throws UnconvertibleException {
-    assertEquals("CD", romanNumerals.toRoman(400));
-    assertEquals("D", romanNumerals.toRoman(500));
-    assertEquals("DCC", romanNumerals.toRoman(700));
+    assertThat(romanNumerals.toRoman(400)).isEqualTo("CD");
+    assertThat(romanNumerals.toRoman(500)).isEqualTo("D");
+    assertThat(romanNumerals.toRoman(700)).isEqualTo("DCC");
   }
 
   @Test
   void should_convert_to_M() throws UnconvertibleException {
-    assertEquals("CM", romanNumerals.toRoman(900));
-    assertEquals("M", romanNumerals.toRoman(1000));
-    assertEquals("MM", romanNumerals.toRoman(2000));
+    assertThat(romanNumerals.toRoman(900)).isEqualTo("CM");
+    assertThat(romanNumerals.toRoman(1000)).isEqualTo("M");
+    assertThat(romanNumerals.toRoman(2000)).isEqualTo("MM");
   }
 
   @Test
   void should_convert_to_complexe_numbers() throws UnconvertibleException {
-    assertEquals("DCCCXLVII", romanNumerals.toRoman(847));
-    assertEquals("MLIII", romanNumerals.toRoman(1053));
-    assertEquals("MDCCLXXVI", romanNumerals.toRoman(1776));
-    assertEquals("MMXVIII", romanNumerals.toRoman(2018));
+    assertThat(romanNumerals.toRoman(847)).isEqualTo("DCCCXLVII");
+    assertThat(romanNumerals.toRoman(1053)).isEqualTo("MLIII");
+    assertThat(romanNumerals.toRoman(1776)).isEqualTo("MDCCLXXVI");
+    assertThat(romanNumerals.toRoman(2018)).isEqualTo("MMXVIII");
   }
 
   @Test
   void should_throw_an_error_if_not_convertible() {
-    Exception exception = assertThrows(UnconvertibleException.class, () -> romanNumerals.toRoman(0));
-
-    String expectedMessage = "Il est impossible de convertir 0 ou un nombre négatif.";
-    String actualMessage = exception.getMessage();
-
-    assertTrue(actualMessage.contains(expectedMessage));
+    assertThatThrownBy(() -> romanNumerals.toRoman(0))
+      .isInstanceOf(UnconvertibleException.class)
+      .hasMessage("Il est impossible de convertir 0 ou un nombre négatif.");
   }
 }

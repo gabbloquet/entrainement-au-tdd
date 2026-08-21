@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.ChristmasLight;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class ChristmasLightUpdatedTest {
 
@@ -22,7 +22,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1000000, christmasLight.getTotalLights());
+    assertThat(christmasLight.getTotalLights()).isEqualTo(1000000);
   }
 
   @Test
@@ -35,7 +35,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getLightsPerIntensity(1));
+    assertThat(christmasLight.getLightsPerIntensity(1)).isEqualTo(1);
   }
 
   @Test
@@ -48,7 +48,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(4, christmasLight.getLightsPerIntensity(1));
+    assertThat(christmasLight.getLightsPerIntensity(1)).isEqualTo(4);
   }
 
   @Test
@@ -61,7 +61,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(100, christmasLight.getLightsPerIntensity(1));
+    assertThat(christmasLight.getLightsPerIntensity(1)).isEqualTo(100);
   }
 
   @Test
@@ -80,7 +80,7 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(initInstruction);
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getLightsPerIntensity(0));
+    assertThat(christmasLight.getLightsPerIntensity(0)).isEqualTo(1);
   }
 
   @Test
@@ -99,7 +99,7 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(initInstruction);
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(4, christmasLight.getLightsPerIntensity(0));
+    assertThat(christmasLight.getLightsPerIntensity(0)).isEqualTo(4);
   }
 
   @Test
@@ -118,7 +118,7 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(initInstruction);
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(100, christmasLight.getLightsPerIntensity(0));
+    assertThat(christmasLight.getLightsPerIntensity(0)).isEqualTo(100);
   }
 
   @Test
@@ -131,7 +131,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getLightsPerIntensity(2));
+    assertThat(christmasLight.getLightsPerIntensity(2)).isEqualTo(1);
   }
 
   @Test
@@ -150,7 +150,7 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(initInstruction);
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getLightsPerIntensity(3));
+    assertThat(christmasLight.getLightsPerIntensity(3)).isEqualTo(1);
   }
 
   @Test
@@ -163,7 +163,7 @@ class ChristmasLightUpdatedTest {
 
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(4, christmasLight.getLightsPerIntensity(2));
+    assertThat(christmasLight.getLightsPerIntensity(2)).isEqualTo(4);
   }
 
   @Test
@@ -183,8 +183,8 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(12, christmasLight.getLightsPerIntensity(1));
-    assertEquals(4, christmasLight.getLightsPerIntensity(3));
+    assertThat(christmasLight.getLightsPerIntensity(1)).isEqualTo(12);
+    assertThat(christmasLight.getLightsPerIntensity(3)).isEqualTo(4);
   }
 
   @Test
@@ -204,9 +204,9 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(12, christmasLight.getLightsPerIntensity(1));
-    assertEquals(4, christmasLight.getLightsPerIntensity(3));
-    assertEquals(24, christmasLight.getCombinedIntensity());
+    assertThat(christmasLight.getLightsPerIntensity(1)).isEqualTo(12);
+    assertThat(christmasLight.getLightsPerIntensity(3)).isEqualTo(4);
+    assertThat(christmasLight.getCombinedIntensity()).isEqualTo(24);
   }
 
   @Test
@@ -226,6 +226,6 @@ class ChristmasLightUpdatedTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(108, christmasLight.getCombinedIntensity());
+    assertThat(christmasLight.getCombinedIntensity()).isEqualTo(108);
   }
 }

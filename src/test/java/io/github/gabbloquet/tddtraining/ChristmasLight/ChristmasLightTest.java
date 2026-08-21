@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.ChristmasLight;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class ChristmasLightTest {
 
@@ -22,7 +22,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1000000, christmasLight.getTotalLights());
+    assertThat(christmasLight.getTotalLights()).isEqualTo(1000000);
   }
 
   @Test
@@ -35,7 +35,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getOpenedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(1);
   }
 
   @Test
@@ -48,7 +48,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(4, christmasLight.getOpenedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(4);
   }
 
   @Test
@@ -61,7 +61,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(100, christmasLight.getOpenedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(100);
   }
 
   @Test
@@ -74,7 +74,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getClosedLights());
+    assertThat(christmasLight.getClosedLights()).isEqualTo(1);
   }
 
   @Test
@@ -87,7 +87,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(4, christmasLight.getClosedLights());
+    assertThat(christmasLight.getClosedLights()).isEqualTo(4);
   }
 
   @Test
@@ -100,7 +100,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(100, christmasLight.getClosedLights());
+    assertThat(christmasLight.getClosedLights()).isEqualTo(100);
   }
 
   @Test
@@ -113,7 +113,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(1, christmasLight.getOpenedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(1);
   }
 
   @Test
@@ -133,7 +133,7 @@ class ChristmasLightTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(1, christmasLight.getClosedLights());
+    assertThat(christmasLight.getClosedLights()).isEqualTo(1);
   }
 
   @Test
@@ -146,7 +146,7 @@ class ChristmasLightTest {
 
     christmasLight.executeInstruction(instruction);
 
-    assertEquals(25, christmasLight.getOpenedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(25);
   }
 
   @Test
@@ -166,7 +166,7 @@ class ChristmasLightTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(36, christmasLight.getClosedLights());
+    assertThat(christmasLight.getClosedLights()).isEqualTo(36);
   }
 
   @Test
@@ -186,7 +186,7 @@ class ChristmasLightTest {
     christmasLight.executeInstruction(openInstruction);
     christmasLight.executeInstruction(toggleInstruction);
 
-    assertEquals(12, christmasLight.getOpenedLights());
-    assertEquals(4, christmasLight.getClosedLights());
+    assertThat(christmasLight.getOpenedLights()).isEqualTo(12);
+    assertThat(christmasLight.getClosedLights()).isEqualTo(4);
   }
 }

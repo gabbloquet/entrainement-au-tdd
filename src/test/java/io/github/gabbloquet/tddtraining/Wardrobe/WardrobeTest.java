@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WardrobeTest {
 
@@ -14,7 +13,7 @@ class WardrobeTest {
 
   @Test
   void should_wardrobe_size_be_250() {
-    assertEquals(250, wardrobe.size());
+    assertThat(wardrobe.size()).isEqualTo(250);
   }
 
   @Test
@@ -55,27 +54,27 @@ class WardrobeTest {
 
   @Test
   void should_return_the_linked_prices() {
-    assertEquals(Map.of(50, 59, 75, 62, 100, 90, 120, 111), wardrobe.getPrices());
+    assertThat(wardrobe.getPrices()).isEqualTo(Map.of(50, 59, 75, 62, 100, 90, 120, 111));
   }
 
   @Test
   void should_return_295_for_5_50_closets() {
-    assertEquals(295, wardrobe.getPrice(List.of(50, 50, 50, 50, 50)));
+    assertThat(wardrobe.getPrice(List.of(50, 50, 50, 50, 50))).isEqualTo(295);
   }
 
   @Test
   void should_return_242_for_2_50_and_2_75_closets() {
-    assertEquals(242, wardrobe.getPrice(List.of(50, 50, 75, 75)));
+    assertThat(wardrobe.getPrice(List.of(50, 50, 75, 75))).isEqualTo(242);
   }
 
   @Test
   void should_return_214_for_2_75_and_1_100_closets() {
-    assertEquals(214, wardrobe.getPrice(List.of(75, 75, 100)));
+    assertThat(wardrobe.getPrice(List.of(75, 75, 100))).isEqualTo(214);
   }
 
   @Test
   void should_return_the_least_expensive_combinations() {
-    assertEquals(List.of(List.of(75, 75, 100), List.of(100, 75, 75)), wardrobe.getLeastExpensiveCombinations());
+    assertThat(wardrobe.getLeastExpensiveCombinations()).isEqualTo(List.of(List.of(75, 75, 100), List.of(100, 75, 75)));
   }
 
 }

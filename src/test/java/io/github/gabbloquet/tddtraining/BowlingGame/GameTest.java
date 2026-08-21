@@ -1,6 +1,7 @@
 package io.github.gabbloquet.tddtraining.BowlingGame;
 
-import org.junit.jupiter.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,13 +21,13 @@ class GameTest {
   @Test
   void should_return_0_for_a_gutter_game() {
     rollMany(20, 0);
-    Assertions.assertEquals(0, game.score());
+    assertThat(game.score()).isZero();
   }
 
   @Test
   void should_return_20_for_all_ones() {
     rollMany(20, 1);
-    Assertions.assertEquals(20, game.score());
+    assertThat(game.score()).isEqualTo(20);
   }
 
   @Test
@@ -34,7 +35,7 @@ class GameTest {
     rollSpare();
     game.roll(4);
     rollMany(17, 0);
-    Assertions.assertEquals(18, game.score());
+    assertThat(game.score()).isEqualTo(18);
   }
 
   private void rollSpare() {
@@ -48,7 +49,7 @@ class GameTest {
     game.roll(2);
     game.roll(3);
     rollMany(16, 0);
-    Assertions.assertEquals(20, game.score());
+    assertThat(game.score()).isEqualTo(20);
   }
 
   private void rollStrike() {
@@ -58,6 +59,6 @@ class GameTest {
   @Test
   void roll_a_perfect_game() {
     rollMany(12, 10);
-    Assertions.assertEquals(300, game.score());
+    assertThat(game.score()).isEqualTo(300);
   }
 }

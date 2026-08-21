@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class EmployeeReportTest {
 
@@ -18,7 +18,7 @@ class EmployeeReportTest {
       "Nina",
       "Mike"
     );
-    assertEquals(employees, employeeReport.getEmployees());
+    assertThat(employeeReport.getEmployees()).isEqualTo(employees);
   }
 
   @Test
@@ -27,6 +27,6 @@ class EmployeeReportTest {
       "SEPP",
       "MIKE"
     );
-    assertEquals(employees, employeeReport.getList());
+    assertThat(employeeReport.getList()).isEqualTo(employees);
   }
 }

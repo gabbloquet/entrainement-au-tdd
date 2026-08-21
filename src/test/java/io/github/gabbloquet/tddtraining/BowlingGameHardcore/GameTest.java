@@ -3,7 +3,7 @@ package io.github.gabbloquet.tddtraining.BowlingGameHardcore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class GameTest {
 
@@ -29,7 +29,7 @@ class GameTest {
 
   @Test
   void should_return_0_as_score_when_the_game_start() {
-    assertEquals(0, game.score());
+    assertThat(game.score()).isZero();
   }
 
   @Test
@@ -38,7 +38,7 @@ class GameTest {
 
     game.roll(userScore);
 
-    assertEquals(1, game.score());
+    assertThat(game.score()).isEqualTo(1);
   }
 
   @Test
@@ -47,7 +47,7 @@ class GameTest {
 
     game.roll(userScore);
 
-    assertEquals(2, game.score());
+    assertThat(game.score()).isEqualTo(2);
   }
 
   @Test
@@ -58,7 +58,7 @@ class GameTest {
     game.roll(firstTry);
     game.roll(secondTry);
 
-    assertEquals(3, game.score());
+    assertThat(game.score()).isEqualTo(3);
   }
 
   @Test
@@ -67,7 +67,7 @@ class GameTest {
 
     rollMany(20, playerScore);
 
-    assertEquals(20, game.score());
+    assertThat(game.score()).isEqualTo(20);
   }
 
   @Test
@@ -76,7 +76,7 @@ class GameTest {
 
     rollMany(20, playerScore);
 
-    assertEquals(40, game.score());
+    assertThat(game.score()).isEqualTo(40);
   }
 
   @Test
@@ -85,7 +85,7 @@ class GameTest {
 
     rollMany(18, 0);
 
-    assertEquals(10, game.score());
+    assertThat(game.score()).isEqualTo(10);
   }
 
   @Test
@@ -97,7 +97,7 @@ class GameTest {
 
     rollMany(17, 0);
 
-    assertEquals(18, game.score());
+    assertThat(game.score()).isEqualTo(18);
   }
 
   @Test
@@ -108,7 +108,7 @@ class GameTest {
 
     rollMany(15, 0);
 
-    assertEquals(43, game.score());
+    assertThat(game.score()).isEqualTo(43);
   }
 
   @Test
@@ -120,7 +120,7 @@ class GameTest {
 
     rollMany(15, 0);
 
-    assertEquals(11, game.score());
+    assertThat(game.score()).isEqualTo(11);
   }
 
   @Test
@@ -132,7 +132,7 @@ class GameTest {
 
     rollMany(15, 0);
 
-    assertEquals(19, game.score());
+    assertThat(game.score()).isEqualTo(19);
   }
 
   @Test
@@ -143,7 +143,7 @@ class GameTest {
 
     rollMany(16, 0);
 
-    assertEquals(20, game.score());
+    assertThat(game.score()).isEqualTo(20);
   }
 
   @Test
@@ -154,7 +154,7 @@ class GameTest {
 
     rollMany(15, 0);
 
-    assertEquals(42, game.score());
+    assertThat(game.score()).isEqualTo(42);
   }
 
   @Test
@@ -165,7 +165,7 @@ class GameTest {
 
     rollMany(14, 0);
 
-    assertEquals(60, game.score());
+    assertThat(game.score()).isEqualTo(60);
   }
 
   @Test
@@ -179,7 +179,7 @@ class GameTest {
     doAStrike();
     game.roll(0);
 
-    assertEquals(52, game.score());
+    assertThat(game.score()).isEqualTo(52);
   }
 
   @Test
@@ -193,7 +193,7 @@ class GameTest {
     doAStrike();
     game.roll(5);
 
-    assertEquals(57, game.score());
+    assertThat(game.score()).isEqualTo(57);
   }
 
   @Test
@@ -208,7 +208,7 @@ class GameTest {
     game.roll(7);
     game.roll(2);
 
-    assertEquals(61, game.score());
+    assertThat(game.score()).isEqualTo(61);
   }
 
   @Test
@@ -216,6 +216,6 @@ class GameTest {
 
     rollMany(12, 10);
 
-    assertEquals(300, game.score());
+    assertThat(game.score()).isEqualTo(300);
   }
 }

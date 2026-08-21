@@ -1,6 +1,7 @@
 package io.github.gabbloquet.tddtraining.WordWrap;
 
-import org.junit.jupiter.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 
 class WrapperTest {
@@ -8,7 +9,7 @@ class WrapperTest {
   private final Wrapper wrapper = new Wrapper();
 
   private void assertWrap(String expected, String StringToWrap, int column) {
-    Assertions.assertEquals(expected, wrapper.wrap(StringToWrap, column));
+    assertThat(wrapper.wrap(StringToWrap, column)).isEqualTo(expected);
   }
 
   @Test

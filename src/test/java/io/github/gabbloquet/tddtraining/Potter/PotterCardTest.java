@@ -1,6 +1,6 @@
 package io.github.gabbloquet.tddtraining.Potter;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,7 +11,7 @@ class PotterCardTest {
     @Test
     void zero_if_card_is_empty() {
         PotterCard card = new PotterCard();
-        assertEquals(0, card.getAmount());
+        assertThat(card.getAmount()).isZero();
     }
 
     @ParameterizedTest
@@ -21,7 +21,7 @@ class PotterCardTest {
 
         card.addBook(book);
 
-        assertEquals(8, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(8);
     }
 
     @Test
@@ -32,7 +32,7 @@ class PotterCardTest {
         card.addBook("À l’école des sorciers");
         card.addBook("À l’école des sorciers");
 
-        assertEquals(24, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(24);
     }
 
     @Test
@@ -42,7 +42,7 @@ class PotterCardTest {
         card.addBook("À l’école des sorciers");
         card.addBook("La Chambre des secrets");
 
-        assertEquals(15.2, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(15.2);
     }
 
     @Test
@@ -53,7 +53,7 @@ class PotterCardTest {
         card.addBook("La Chambre des secrets");
         card.addBook("Le Prisonnier d'Azkaban");
 
-        assertEquals(21.6, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(21.6);
     }
 
     @Test
@@ -66,7 +66,7 @@ class PotterCardTest {
         card.addBook("La Coupe de feu");
         card.addBook("L'Ordre du phénix");
 
-        assertEquals(32, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(32);
     }
 
     @Test
@@ -77,7 +77,7 @@ class PotterCardTest {
         card.addBook("À l’école des sorciers");
         card.addBook("La Chambre des secrets");
 
-        assertEquals(15.2 + 8, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(15.2 + 8);
     }
 
     @Test
@@ -89,7 +89,7 @@ class PotterCardTest {
         card.addBook("La Chambre des secrets");
         card.addBook("La Chambre des secrets");
 
-        assertEquals(15.2 + 15.2, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(15.2 + 15.2);
     }
 
     @Test
@@ -102,6 +102,6 @@ class PotterCardTest {
         card.addBook("La Chambre des secrets");
         card.addBook("La Chambre des secrets");
 
-        assertEquals(15.2 + 15.2 + 8, card.getAmount());
+        assertThat(card.getAmount()).isEqualTo(15.2 + 15.2 + 8);
     }
 }

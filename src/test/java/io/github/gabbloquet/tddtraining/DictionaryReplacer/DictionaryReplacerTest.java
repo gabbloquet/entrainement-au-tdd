@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class DictionaryReplacerTest {
 
@@ -15,7 +15,7 @@ class DictionaryReplacerTest {
     String entry = "";
     Map<String, String> dictionary = Map.of();
 
-    assertEquals("", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("");
   }
 
   @Test
@@ -23,7 +23,7 @@ class DictionaryReplacerTest {
     String entry = "toto";
     Map<String, String> dictionary = Map.of();
 
-    assertEquals("toto", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("toto");
   }
 
   @Test
@@ -31,7 +31,7 @@ class DictionaryReplacerTest {
     String entry = "$temp$";
     Map<String, String> dictionary = Map.of("temp", "temporary");
 
-    assertEquals("temporary", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("temporary");
   }
 
   @Test
@@ -39,7 +39,7 @@ class DictionaryReplacerTest {
     String entry = "$name$";
     Map<String, String> dictionary = Map.of("name", "Gabin");
 
-    assertEquals("Gabin", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("Gabin");
   }
 
   @Test
@@ -47,7 +47,7 @@ class DictionaryReplacerTest {
     String entry = "$name$, bienvenue !!";
     Map<String, String> dictionary = Map.of("name", "Gabin");
 
-    assertEquals("Gabin, bienvenue !!", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("Gabin, bienvenue !!");
   }
 
   @Test
@@ -55,6 +55,6 @@ class DictionaryReplacerTest {
     String entry = "$temp$ here comes the name $name$";
     Map<String, String> dictionary = Map.of("name", "Gabin", "temp", "temporary");
 
-    assertEquals("temporary here comes the name Gabin", dictionaryReplacer.replace(entry, dictionary));
+    assertThat(dictionaryReplacer.replace(entry, dictionary)).isEqualTo("temporary here comes the name Gabin");
   }
 }
