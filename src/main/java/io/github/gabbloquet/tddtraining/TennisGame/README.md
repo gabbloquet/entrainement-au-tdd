@@ -22,9 +22,9 @@ Ce kata classique vous guide pas à pas dans l'implémentation d'un compteur de 
  - 3ème point : "40" 
  - 4ème point : "jeu"
 
-Si les deux joueurs ont 40, le point suivant est noté : "avantage".  
+Si les deux joueurs ont 40, le point suivant est noté : "advantage".  
 Si le même joueur gagne un autre point, il gagne la "partie".  
-Dans le cas contraire, les deux joueurs repartent sur un "égalité".
+Dans le cas contraire, les deux joueurs repartent sur un "deuce" (égalité).
 
 ### Gagner un set
 
@@ -48,18 +48,14 @@ Il n'y a pas de tie break ! Les joueurs doivent avoir 2 jeux d'écart !
 
 ## Étapes
 
-Entrée : la liste des noms, correspondant au gagnant de chaque point (Liste <String>)
-Sortie : le score String[][]
+Entrée : la suite des gagnants de chaque point, séparés par des virgules (`A,B,A`)  
+Sortie : une ligne `A <jeux des 5 sets> <points du jeu en cours> B <jeux des 5 sets> <points du jeu en cours>`
 
 ### Exemple pour les joueurs A et B
 
 **entrée** : `A,A,A,B,A,B,B,A`
 
-**sortie** :
-```text
-A 1 0 0 0 0 15
-B 0 0 0 0 0 30
-```
+**sortie** : A 1 0 0 0 0 15 B 0 0 0 0 0 30
 
 
 ### Étape 1 - Afficher le score d'un jeu
@@ -76,8 +72,8 @@ B 0 0 0 0 0 30
 **entrée** : A,B,A,B,A,A  
 **sortie** : A 1 0 0 0 0 0 B 0 0 0 0 0 0
 
-Entrée : A,B,A,B,A,B,A  
-**sortie** : A 0 0 0 0 0 avantage B 0 0 0 0 0 0
+**entrée** : A,B,A,B,A,B,A  
+**sortie** : A 0 0 0 0 0 advantage B 0 0 0 0 0 0
 
 **entrée** : A,B,A,B,A,B,A,B  
 **sortie** : A 0 0 0 0 0 deuce B 0 0 0 0 0 deuce
