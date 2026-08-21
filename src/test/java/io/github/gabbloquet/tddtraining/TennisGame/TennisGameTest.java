@@ -30,6 +30,9 @@ class TennisGameTest {
 
     TennisGame aWonThreePointsBOne = new TennisGame("A,A,A,B");
     assertThat(aWonThreePointsBOne.getScore()).isEqualTo("A 0 0 0 0 0 40 B 0 0 0 0 0 15");
+
+    TennisGame aWonThreePointsBTwo = new TennisGame("A,A,A,B,B");
+    assertThat(aWonThreePointsBTwo.getScore()).isEqualTo("A 0 0 0 0 0 40 B 0 0 0 0 0 30");
   }
 
   @Test

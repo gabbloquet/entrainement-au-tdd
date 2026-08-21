@@ -33,6 +33,15 @@ class WardrobeTest {
   }
 
   @Test
+  void should_only_return_combinations_filling_exactly_the_wall() {
+    List<List<Integer>> combinations = wardrobe.compliantCombinations();
+
+    assertThat(combinations).hasSize(12);
+    assertThat(combinations).allSatisfy(combination ->
+      assertThat(combination.stream().mapToInt(Integer::intValue).sum()).isEqualTo(wardrobe.size()));
+  }
+
+  @Test
   void should_return_five_times_the_50_closet() {
     assertThat(wardrobe.compliantCombinations()).contains(List.of(50, 50, 50, 50, 50));
   }

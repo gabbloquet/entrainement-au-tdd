@@ -40,6 +40,11 @@ class WrapperTest {
     assertWrap("xx xx", "xx xx", 5);
   }
 
+  @Test
+  void should_break_on_the_space_when_the_next_word_fills_exactly_a_line() {
+    assertWrap("ab\ncdefgh", "ab cdefgh", 6);
+  }
+
   @ParameterizedTest
   @MethodSource
   void should_wrap_the_examples_of_the_readme(String stringToWrap, int column, String expected) {

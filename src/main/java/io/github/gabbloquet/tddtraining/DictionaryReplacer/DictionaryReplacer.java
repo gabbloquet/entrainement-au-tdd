@@ -12,13 +12,9 @@ public class DictionaryReplacer {
 
   public String replace(String entry, Map<String, String> dictionary) {
 
-    List<String> elementsToSearch = getElementsToSearch(entry);
-
-    if(elementsToSearch.size() > 0){
-      for(int i = 0; i < elementsToSearch.size(); i++) {
-        String foundElement = dictionary.get(elementsToSearch.get(i));
-        entry = entry.replace(DELIMITER + elementsToSearch.get(i) + DELIMITER, foundElement);
-      }
+    for (String elementToSearch : getElementsToSearch(entry)) {
+      String foundElement = dictionary.get(elementToSearch);
+      entry = entry.replace(DELIMITER + elementToSearch + DELIMITER, foundElement);
     }
 
     return entry;
