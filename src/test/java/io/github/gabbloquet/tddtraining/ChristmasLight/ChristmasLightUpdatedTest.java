@@ -15,6 +15,33 @@ class ChristmasLightUpdatedTest {
   }
 
   @Test
+  void should_not_go_below_zero_when_turning_off_a_light_already_off() {
+    var turnOff = new Instruction(InstructionType.TURNOFF,
+      0, 0,
+      0, 0);
+
+    christmasLight.executeInstruction(turnOff);
+
+    assertThat(christmasLight.getCombinedIntensity()).isZero();
+  }
+
+  @Test
+  void should_subtract_only_one_intensity_to_a_light_turned_on_twice() {
+    var turnOn = new Instruction(InstructionType.TURNON,
+      0, 0,
+      0, 0);
+    var turnOff = new Instruction(InstructionType.TURNOFF,
+      0, 0,
+      0, 0);
+
+    christmasLight.executeInstruction(turnOn);
+    christmasLight.executeInstruction(turnOn);
+    christmasLight.executeInstruction(turnOff);
+
+    assertThat(christmasLight.getCombinedIntensity()).isEqualTo(1);
+  }
+
+  @Test
   void should_count_total_lights() {
     var instruction = new Instruction(InstructionType.TURNON,
       0, 0,
