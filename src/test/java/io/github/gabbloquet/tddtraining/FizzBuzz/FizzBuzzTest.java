@@ -1,137 +1,57 @@
 package io.github.gabbloquet.tddtraining.FizzBuzz;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class FizzBuzzTest {
 
-  private FizzBuzz fizzBuzz;
+    private final FizzBuzz fizzBuzz = new FizzBuzz();
 
-  @BeforeEach
-  void setUp() {
-    fizzBuzz = new FizzBuzz();
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 4})
+    void should_return_the_number_when_it_is_multiple_of_neither_3_nor_5(int number) {
+        assertThat(fizzBuzz.convert(number)).isEqualTo(String.valueOf(number));
+    }
 
-  @Test
-  void should_return_1_when_number_is_1() {
-    int one = 1;
-    String expectedString = "1";
-    assertEquals(expectedString, fizzBuzz.convert(one));
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9, 12})
+    void should_return_fizz_for_every_multiple_of_3(int number) {
+        assertThat(fizzBuzz.convert(number)).isEqualTo("Fizz");
+    }
 
-  @Test
-  void should_return_fizz_when_the_number_is_3() {
-    int three = 3;
-    String expectedString = "Fizz";
-    assertEquals(expectedString, fizzBuzz.convert(three));
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 20})
+    void should_return_buzz_for_every_multiple_of_5(int number) {
+        assertThat(fizzBuzz.convert(number)).isEqualTo("Buzz");
+    }
 
-  @Test
-  void should_return_buzz_when_the_number_is_5() {
-    int five = 5;
-    String expectedString = "Buzz";
-    assertEquals(expectedString, fizzBuzz.convert(five));
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {15, 30, 45, 60})
+    void should_return_fizzbuzz_for_every_multiple_of_15(int number) {
+        assertThat(fizzBuzz.convert(number)).isEqualTo("FizzBuzz");
+    }
 
-  @Test
-  void should_return_fizzbuzz_when_the_number_is_15() {
-    int fifteen = 15;
-    String expectedString = "FizzBuzz";
-    assertEquals(expectedString, fizzBuzz.convert(fifteen));
-  }
+    @Test
+    void should_concatenate_every_conversion_up_to_20() {
+        assertThat(fizzBuzz.compute(20))
+            .isEqualTo("12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19Buzz");
+    }
 
-  @Test
-  void should_return_fizz_for_every_multiple_of_3() {
-    int six = 6;
-    int nine = 9;
-    int twelve = 12;
+    @Test
+    void should_concatenate_every_conversion_up_to_100() {
+        assertThat(fizzBuzz.compute(100))
+            .isEqualTo("12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz");
+    }
 
-    String expectedString = "Fizz";
-
-    assertEquals(expectedString, fizzBuzz.convert(six));
-    assertEquals(expectedString, fizzBuzz.convert(nine));
-    assertEquals(expectedString, fizzBuzz.convert(twelve));
-  }
-
-  @Test
-  void should_return_buzz_for_every_multiple_of_5() {
-    int five = 5;
-    int ten = 10;
-    int twenty = 20;
-
-    String expectedString = "Buzz";
-
-    assertEquals(expectedString, fizzBuzz.convert(five));
-    assertEquals(expectedString, fizzBuzz.convert(ten));
-    assertEquals(expectedString, fizzBuzz.convert(twenty));
-  }
-
-  @Test
-  void should_return_fizzbuzz_for_every_multiple_of_15() {
-    int thirty = 30;
-    int fortyFive = 45;
-    int sixty = 60;
-
-    String expectedString = "FizzBuzz";
-
-    assertEquals(expectedString, fizzBuzz.convert(thirty));
-    assertEquals(expectedString, fizzBuzz.convert(fortyFive));
-    assertEquals(expectedString, fizzBuzz.convert(sixty));
-  }
-
-  @Test
-  void should_return_the_number_else() {
-    int one = 1;
-    int two = 2;
-    int four = 4;
-
-    assertEquals(fizzBuzz.convert(one), "1");
-    assertEquals(fizzBuzz.convert(two), "2");
-    assertEquals(fizzBuzz.convert(four), "4");
-  }
-
-  @Test
-  void should_return_transformed_list_to_20() {
-    int to = 20;
-
-    String expectedList = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19Buzz";
-
-    assertEquals(fizzBuzz.compute(to), expectedList);
-  }
-
-  @Test
-  void should_return_transformed_list_to_100() {
-    int to = 100;
-
-    String expectedList = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz1617Fizz19BuzzFizz2223FizzBuzz26Fizz2829FizzBuzz3132Fizz34BuzzFizz3738FizzBuzz41Fizz4344FizzBuzz4647Fizz49BuzzFizz5253FizzBuzz56Fizz5859FizzBuzz6162Fizz64BuzzFizz6768FizzBuzz71Fizz7374FizzBuzz7677Fizz79BuzzFizz8283FizzBuzz86Fizz8889FizzBuzz9192Fizz94BuzzFizz9798FizzBuzz";
-
-    assertEquals(fizzBuzz.compute(to), expectedList);
-  }
-
-  @Test
-  void should_throw_non_compliant_error_if_number_is_0() {
-    Exception exception = assertThrows(NonCompliantNumberException.class, () -> {
-      fizzBuzz.compute(0);
-    });
-
-    String expectedMessage = "The number provided is not greater than 1";
-    String actualMessage = exception.getMessage();
-
-    assertTrue(actualMessage.contains(expectedMessage));
-  }
-
-  @Test
-  void should_throw_non_compliant_error_if_number_is_minus_3() {
-    Exception exception = assertThrows(NonCompliantNumberException.class, () -> {
-      fizzBuzz.compute(-3);
-    });
-
-    String expectedMessage = "The number provided is not greater than 1";
-    String actualMessage = exception.getMessage();
-
-    assertTrue(actualMessage.contains(expectedMessage));
-  }
-
+    @ParameterizedTest
+    @ValueSource(ints = {0, -3})
+    void should_throw_when_the_number_to_compute_is_lower_than_1(int number) {
+        assertThatThrownBy(() -> fizzBuzz.compute(number))
+            .isInstanceOf(NonCompliantNumberException.class)
+            .hasMessage("The number provided is not greater than 1");
+    }
 }

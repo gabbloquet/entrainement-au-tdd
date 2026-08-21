@@ -1,42 +1,60 @@
 package io.github.gabbloquet.tddtraining.PrimeFactors;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
 import static io.github.gabbloquet.tddtraining.PrimeFactors.PrimeFactors.factorsOf;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
+
+import java.util.stream.Stream;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class PrimeFactorsTest {
 
-  @Test
-  void should_return_an_empty_array_if_is_0_or_1() {
-    assertEquals(List.of(), factorsOf(0));
-    assertEquals(List.of(), factorsOf(1));
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {0, 1})
+    void should_return_no_factor_when_the_number_is_0_or_1(int number) {
+        assertThat(factorsOf(number)).isEmpty();
+    }
 
-  @Test
-  void should_return_X_if_X_is_a_prime_number() {
-    assertEquals(List.of(2), factorsOf(2));
-    assertEquals(List.of(3), factorsOf(3));
-    assertEquals(List.of(5), factorsOf(5));
-  }
+    @ParameterizedTest
+    @ValueSource(ints = {2, 3, 5})
+    void should_return_the_number_itself_when_it_is_prime(int prime) {
+        assertThat(factorsOf(prime)).containsExactly(prime);
+    }
 
-  @Test
-  void should_return_2_and_X_if_X_is_divisible_by_2() {
-    assertEquals(List.of(2, 2), factorsOf(4));
-    assertEquals(List.of(2, 3), factorsOf(6));
-    assertEquals(List.of(2, 2, 2), factorsOf(8));
-  }
+    @ParameterizedTest
+    @MethodSource
+    void should_return_2_and_the_remaining_factors_when_the_number_is_divisible_by_2(int number, Integer[] expectedFactors) {
+        assertThat(factorsOf(number)).containsExactly(expectedFactors);
+    }
 
-  @Test
-  void should_return_3_and_X_if_X_is_divisible_by_3() {
-    assertEquals(List.of(3, 3), factorsOf(9));
-    assertEquals(List.of(3, 5), factorsOf(15));
-  }
+    static Stream<Arguments> should_return_2_and_the_remaining_factors_when_the_number_is_divisible_by_2() {
+        return Stream.of(
+            arguments(4, new Integer[]{2, 2}),
+            arguments(6, new Integer[]{2, 3}),
+            arguments(8, new Integer[]{2, 2, 2})
+        );
+    }
 
-  @Test
-  void should_return_all_factors() {
-    assertEquals(List.of(2, 2, 3, 5, 7, 11, 13), factorsOf(2 * 2 * 3 * 5 * 7 * 11 * 13));
-  }
+    @ParameterizedTest
+    @MethodSource
+    void should_return_3_and_the_remaining_factors_when_the_number_is_divisible_by_3(int number, Integer[] expectedFactors) {
+        assertThat(factorsOf(number)).containsExactly(expectedFactors);
+    }
+
+    static Stream<Arguments> should_return_3_and_the_remaining_factors_when_the_number_is_divisible_by_3() {
+        return Stream.of(
+            arguments(9, new Integer[]{3, 3}),
+            arguments(15, new Integer[]{3, 5})
+        );
+    }
+
+    @Test
+    void should_return_every_factor_in_ascending_order() {
+        assertThat(factorsOf(2 * 2 * 3 * 5 * 7 * 11 * 13))
+            .containsExactly(2, 2, 3, 5, 7, 11, 13);
+    }
 }
