@@ -1,5 +1,7 @@
 # Entrainement au Test Driven Development
 
+[![tests](https://github.com/gabbloquet/entrainement-au-tdd/actions/workflows/tests.yml/badge.svg)](https://github.com/gabbloquet/entrainement-au-tdd/actions/workflows/tests.yml)
+
 Oui c'est en Français ! (Et c'est voulu :D)  
 Ce repository a pour but de s'exercer au test driven development à travers des exemples (katas), qui, je l'espère, sauront vous divertir.   
 
