@@ -2,10 +2,10 @@
 
 **Niveau :** Moyen
 
-Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour faire tomber 10 quilles. Le score du cadre est le nombre total de quilles abattues, plus les bonus pour les strikes et les spares.
- - On parle de réserve lorsque le joueur fait tomber les 10 quilles en deux lancers. Le bonus pour ce cadre est le nombre de quilles abattues au prochain lancer. 
- - On parle de strike lorsque le joueur fait tomber les 10 quilles lors de son premier lancer. Le cadre est alors complété par un seul lancer. Le bonus pour ce cadre est la valeur des deux lancers suivants. 
- - Dans le dixième carreau, un joueur qui a obtenu un spare ou un strike est autorisé à lancer les boules supplémentaires pour terminer le carreau. Toutefois, il ne peut pas lancer plus de trois boules dans le dixième tour.
+Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour faire tomber 10 quilles. Le score du tour est le nombre total de quilles abattues, plus les bonus pour les strikes et les spares.
+ - On parle de **spare** lorsque le joueur fait tomber les 10 quilles en deux lancers. Le bonus pour ce tour est le nombre de quilles abattues au prochain lancer. 
+ - On parle de **strike** lorsque le joueur fait tomber les 10 quilles lors de son premier lancer. Le tour est alors complété par un seul lancer. Le bonus pour ce tour est la valeur des deux lancers suivants. 
+ - Dans le dixième tour, un joueur qui a obtenu un spare ou un strike est autorisé à lancer les boules supplémentaires pour le terminer. Toutefois, il ne peut pas y lancer plus de trois boules.
 
 [Plus de détails ici](https://www.lelooping.com/montivilliers/les-regles-du-bowling/).
 
