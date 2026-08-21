@@ -54,8 +54,8 @@ Permet à la méthode `add` de gérer un délimiteur différent. Pour changer le
 
 L'appel de `add` avec des nombres négatifs renverra le message `Negative not allowed : ` en listant tous les nombres négatifs qui étaient dans la liste de nombres.
 
- - "-1,2" n'est pas valide et doit renvoyer le message "Négatif non autorisé : -1".
- - "2,-4,-5" n'est pas valide et doit renvoyer le message "Négatif non autorisé : -4, -5".
+ - "-1,2" n'est pas valide et doit renvoyer le message `"Negative not allowed : -1"`.
+ - "2,-4,-5" n'est pas valide et doit renvoyer le message `"Negative not allowed : -4, -5"`.
 
 ### Erreurs multiples
 
