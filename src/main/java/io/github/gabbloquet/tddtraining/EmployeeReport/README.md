@@ -1,11 +1,11 @@
 # Employee Report
 
-**Niveau :** Facile 
+**Niveau :** Facile
 
 Ce Kata a été développé pour montrer comment la surspécification des assertions nuit à la maintenabilité des tests.   
 Un article de blog avec une solution possible => [ici](https://dev.to/webpapaya/writing-better-test-assertions-lml).
 
-## Problème
+## Énoncé
 
 Vous construisez un système de gestion des employés d'une épicerie locale.   
 Le propriétaire du magasin souhaite ouvrir le magasin le dimanche et, en raison de restrictions légales, les employés de moins de 18 ans ne sont pas autorisés à travailler le dimanche.  
@@ -25,7 +25,7 @@ const employees = [
 ];
 ```
 
-## Les règles :
+## Règles
 
 Commencez par la première User Story et écrivez au moins un test pour chaque exigence.  
 Essayez de ne pas tenir compte des exigences futures dès le départ et suivez strictement le cycle TDD.

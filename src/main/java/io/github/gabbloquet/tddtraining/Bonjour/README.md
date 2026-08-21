@@ -2,10 +2,12 @@
 
 **Niveau :** Moyen
 
-## Exigences
+## Énoncé
 
 L'objectif de cet exercice est de dire bonjour poliment !
 Pour cela, nous te proposons d'implémenter ces règles:
+
+## Règles
 
 - Règle 1 : Saluer avec le prénom de la personne comme suit `Bonjour <prénom>`
 - Règle 2 : Supprimer les espaces inutiles avant et après le prénom

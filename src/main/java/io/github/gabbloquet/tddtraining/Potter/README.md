@@ -2,7 +2,7 @@
 
 **Niveau :** Moyen
 
-## Ennoncé
+## Énoncé
 Un libraire est tombé amoureux de la série Harry Potter et veut faire une campagne de promotion.    
 
 Vous devez calculer le taux de réduction accordé en achetant plusieurs livres de la célébre série. Un livre de la série coûte 8 euros.  
@@ -28,6 +28,6 @@ Voici la liste des titres :
 6. Le Prince de sang-mêlé 
 7. Les Reliques de la Mort
 
-## Exercice
+## Objectif
 
 L'objectif étant donc d'implémenter le code permettant d'ajouter un ou plusieurs livres à mon panier et en connaitre son montant.

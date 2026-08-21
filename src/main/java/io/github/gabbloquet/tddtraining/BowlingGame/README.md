@@ -1,4 +1,4 @@
-# Bowling Game Classic
+# Bowling Game Classic / Jeu de bowling
 
 **Niveau :** Moyen
 
@@ -12,15 +12,15 @@ Le jeu se compose de 10 tours. Dans chaque tour, le joueur a deux lancers pour f
 Attention, pour ce kata, on ne s'intéresse qu'aux parties terminées et correctes.  
 La version plus difficile est [ici](../BowlingGameHardcore/README.md)
 
-## Exigences
+## Énoncé
 
 Écrivez une classe Game qui possède deux méthodes :
 1. **void roll(int)** est appelé chaque fois que le joueur lance une boule. L'argument est le nombre de quilles abattues.
 2. **int score()** renvoie le score total pour cette partie.
 
-## Aide
+## Étapes
 
-### Step 1 - Règles classiques
+### Étape 1 - Règles classiques
 
 Entrée : vide  
 Score attendu : 0
@@ -31,17 +31,17 @@ Score attendu : 0
 Entrée : On roll 20 fois 1  
 Score attendu : 20
 
-### Step 2 - Le Spare
+### Étape 2 - Le Spare
 
 Entrée : On roll 7, 3 puis 4 & 17 fois 0  
 Score attendu : 18
 
-### Step 3 - Le Strike
+### Étape 3 - Le Strike
 
 Entrée : On roll 10, 3 puis 4 & 16 fois 0  
 Score attendu : 24
 
-### Step 4 - Le cas du génie
+### Étape 4 - Le cas du génie
 
 Entrée : On roll 12 fois 10  
 Score attendu : 300

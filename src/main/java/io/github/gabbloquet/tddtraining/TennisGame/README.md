@@ -1,6 +1,9 @@
-# Tennis Game
+# Tennis Game / Jeu de tennis
 
 **Niveau :** Difficile
+
+## Énoncé
+
 Ce kata classique vous guide pas à pas dans l'implémentation d'un compteur de point de tennis.
 
 ## Règles
@@ -98,7 +101,7 @@ Entrée : A,B,A,B,A,B,A
 **entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A  
 **sortie** : A 7 0 0 0 0 0 B 5 0 0 0 0 0
 
-### Etape 4- Affichage du score avec tie break
+### Étape 4 - Affichage du score avec tie break
 
 **entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,A  
 **sortie** : A 7 0 0 0 0 0 B 6 0 0 0 0 0
@@ -106,7 +109,7 @@ Entrée : A,B,A,B,A,B,A
 **entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,B,B,B,B,A,A,A,A,A,A,B,B,B,B,B,B,B,B    
 **sortie** : A 6 0 0 0 0 0 B 7 0 0 0 0 0
 
-### Etape 5 - Affichage du score pour 5 sets
+### Étape 5 - Affichage du score pour 5 sets
 
 **entrée** : A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A  
 **sortie** : A 6 1 6 6 0 0 B 2 6 0 0 0 0

@@ -2,13 +2,13 @@
 
 **Niveau :** Facile
 
-## Introduction 
+## Introduction
 
 Il s'agit d'un Kata très court. L'algorithme final est de trois lignes de code. Il est intéressant de noter qu'il y a 40 lignes de code de test.
 
 Bien qu'assez court, ce kata est fascinant dans la façon dont il montre comment les instructions `if` deviennent des instructions `while` lorsque le nombre de cas de test augmente. C'est aussi un merveilleux exemple de la façon dont les algorithmes deviennent parfois plus simples lorsqu'ils deviennent plus généraux.
 
-## Les nombres premiers 
+## Les nombres premiers
 
 [Définition Wikipédia](https://fr.wikipedia.org/wiki/Nombre_premier) : 
 
@@ -16,11 +16,11 @@ Bien qu'assez court, ce kata est fascinant dans la façon dont il montre comment
 
 ![prime_numbers](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Primencomposite0100.svg/1200px-Primencomposite0100.svg.png)
 
-## Enoncé
+## Énoncé
 
 Ecrire une classe `PrimeFactors` qui a une seule méthode (statique) `factorsOf`. Cette méthode prend un argument de type entier et retourne un tableau d’entiers représentant les facteurs de ce nombre.
 
-_Exemple :_
+## Exemples
 
 ```
 0 et 1 => []
@@ -30,6 +30,6 @@ _Exemple :_
 9 => [3, 3]
 ```
 
-## Petit à petit
+## Aide
 
 N'oubliez pas, on avance pas à pas. On commence par le cas le plus absurde. Puis on implémente les règles de la plus basique à la plus précise.

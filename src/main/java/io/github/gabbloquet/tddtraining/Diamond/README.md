@@ -8,6 +8,8 @@ L'énoncé de ce kata est court :
 
 > Étant donné une lettre, imprimez un diamant commençant par 'A' avec la lettre fournie au point le plus large.
 
+## Exemples
+
 **Par exemple** : Pour la lettre `E`
 
 ```

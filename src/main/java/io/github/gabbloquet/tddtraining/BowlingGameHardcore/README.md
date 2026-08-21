@@ -1,4 +1,4 @@
-# Bowling Game hardcore
+# Bowling Game Hardcore / Jeu de bowling complet
 
 **Niveau :** Difficile
 
@@ -13,13 +13,13 @@ La complexité de ce Kata réside dans le fait que le score doit-être calculé 
 Comme lorsque l'on va au bowling, lorsqu'on lance une boule on a un retour visuel direct.  
 La version plus facile [ici](../BowlingGame/README.md).
 
-## Exigences
+## Énoncé
 
 Écrivez une classe Game qui possède deux méthodes :
 1. **void roll(int)** est appelé chaque fois que le joueur lance une boule. L'argument est le nombre de quilles abattues.
 2. **int score()** renvoie le score total pour cette partie.
 
-## Exemple
+## Exemples
 
 Le premier test pourrait ressembler à quelque chose comme :
 
@@ -35,9 +35,9 @@ Le premier test pourrait ressembler à quelque chose comme :
 ```
 
 
-## Aide
+## Étapes
 
-### Step 1 - Règles classiques
+### Étape 1 - Règles classiques
 
 Entrée : vide  
 Score attendu : 0
@@ -54,7 +54,7 @@ Score attendu : 5
 Entrée : 1, 6, 3, 5, 1, 2, 9, 0, 3, 2, 7, 2, 5, 4, 4, 3, 6, 2, 7, 2  
 Score attendu : 74
 
-### Step 2 - Le Spare
+### Étape 2 - Le Spare
 
 Entrée : 1, 9  
 Score attendu : 10
@@ -65,7 +65,7 @@ Score attendu : 18
 Entrée : 1, 9, 7, 3, 7, 2   
 Score attendu : 43
 
-### Step 3 - Le Strike
+### Étape 3 - Le Strike
 
 Entrée : 10, 0, 0, 1, 0   
 Score attendu : 11
@@ -82,7 +82,7 @@ Score attendu : 42
 Entrée : 10, 10, 10, 0   
 Score attendu : 60
 
-### Step 4 - La fin de partie
+### Étape 4 - La fin de partie
 
 Entrée : 10, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0  
 Score attendu : 52

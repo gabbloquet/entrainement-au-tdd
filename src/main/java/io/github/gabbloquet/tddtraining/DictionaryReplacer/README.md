@@ -1,19 +1,19 @@
 # Dictionary Replacer
 
-**Niveau :** Facile 
+**Niveau :** Facile
 
 ## Introduction
 
 Ce kata consiste à fabriquer un simple remplacement de chaine de caractère.   
 Il est inspiré du discours de Corey Haines Lightning sur la pratique.  
 
-## Comment ?
+## Énoncé
 
 Créez une méthode qui : 
  - prend une chaîne de caractères et un dictionnaire
  - remplace chaque clé du dictionnaire pré et suffixée par un signe dollar, par la valeur correspondante du dictionnaire.
 
-## Les 3 tests :
+## Exemples
 
 **Entrée :** “”  
 **Dictionnaire :** empty  
