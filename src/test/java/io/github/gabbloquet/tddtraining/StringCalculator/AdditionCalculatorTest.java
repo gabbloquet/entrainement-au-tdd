@@ -25,6 +25,12 @@ class AdditionCalculatorTest {
   }
 
   @Test
+  void should_round_the_result_to_three_decimals() throws Exception {
+    assertThat(additionCalculator.calculate("1.23456,0")).isEqualTo("1,235");
+    assertThat(additionCalculator.calculate("0.0001,0")).isEqualTo("0");
+  }
+
+  @Test
   void should_return_3_comma_3_if_operation_is_1_dot_1_and_2_dot_2() throws Exception {
     assertThat(additionCalculator.calculate("1.1,2.2")).isEqualTo("3,3");
   }
