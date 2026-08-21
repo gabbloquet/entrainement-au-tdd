@@ -1,11 +1,13 @@
 package io.github.gabbloquet.tddtraining.Bonjour;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class BonjourTest {
@@ -48,6 +50,17 @@ public class BonjourTest {
         Bonjour bonjour = bonjourAt(hour);
 
         assertThat(bonjour.greet("  hervé ")).isEqualTo("Bonne nuit Hervé");
+    }
+
+    @ParameterizedTest
+    @NullSource
+    @ValueSource(strings = {"", "   "})
+    void should_refuse_to_greet_without_a_firstname(String firstname) {
+        Bonjour bonjour = new Bonjour(hourSupplier);
+
+        assertThatThrownBy(() -> bonjour.greet(firstname))
+            .isInstanceOf(MissingFirstnameException.class)
+            .hasMessage("A firstname is required to greet someone.");
     }
 
     private Bonjour bonjourAt(int hour) {

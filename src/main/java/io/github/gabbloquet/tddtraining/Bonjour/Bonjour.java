@@ -9,6 +9,9 @@ public class Bonjour {
     }
 
     public String greet(String firstname) {
+        if (firstname == null || firstname.isBlank())
+            throw new MissingFirstnameException();
+
         String cleanedFirstname = firstname.trim();
         String uppercaseFirstname = cleanedFirstname.substring(0, 1).toUpperCase() + cleanedFirstname.substring(1);
 
