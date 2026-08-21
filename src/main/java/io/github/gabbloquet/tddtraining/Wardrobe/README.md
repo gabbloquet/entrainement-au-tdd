@@ -1,7 +1,6 @@
 # Wardrobe
 
-**Niveau :** Facile
-
+**Niveau :** Moyen
 ## Configurez votre garde-robe
 
 Imaginez que vous venez emménager dans votre nouvel appartement, et que vous vous rendez compte que vous avez encore besoin d'une nouvelle armoire pour votre dressing.  
