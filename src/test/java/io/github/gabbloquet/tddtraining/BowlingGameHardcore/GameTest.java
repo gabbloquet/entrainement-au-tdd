@@ -169,12 +169,32 @@ class GameTest {
   }
 
   @Test
+  void should_score_two_strikes_and_4_live_without_waiting_for_the_end_of_the_game() {
+    doAStrike();
+    doAStrike();
+    game.roll(4);
+    game.roll(0);
+
+    assertThat(game.score()).isEqualTo(42);
+  }
+
+  @Test
+  void should_score_three_strikes_live_without_waiting_for_the_end_of_the_game() {
+    doAStrike();
+    doAStrike();
+    doAStrike();
+    game.roll(0);
+
+    assertThat(game.score()).isEqualTo(60);
+  }
+
+  @Test
   void should_return_52_if_the_player_does_2_strikes_then_4_and_at_then_end_10_and_0() {
     doAStrike();
     doAStrike();
     game.roll(4);
 
-    rollMany(15, 0);
+    rollMany(14, 0);
 
     doAStrike();
     game.roll(0);
@@ -188,7 +208,7 @@ class GameTest {
     doAStrike();
     game.roll(4);
 
-    rollMany(15, 0);
+    rollMany(14, 0);
 
     doAStrike();
     game.roll(5);
